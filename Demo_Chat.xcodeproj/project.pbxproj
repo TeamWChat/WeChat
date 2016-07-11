@@ -68,6 +68,7 @@
 		843C2CF31D336A63009EFA3C /* WCMessageListTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = 843C2CF21D336A63009EFA3C /* WCMessageListTableController.m */; };
 		843C2CF61D336A77009EFA3C /* WCChatTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = 843C2CF51D336A77009EFA3C /* WCChatTableController.m */; };
 		843C2CF91D336A8A009EFA3C /* WCProfileTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = 843C2CF81D336A8A009EFA3C /* WCProfileTableController.m */; };
+		84E48CFD1D33A2CB00A4D89B /* WCNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E48CFC1D33A2CB00A4D89B /* WCNavigationController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -243,6 +244,8 @@
 		843C2CF51D336A77009EFA3C /* WCChatTableController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCChatTableController.m; sourceTree = "<group>"; };
 		843C2CF71D336A8A009EFA3C /* WCProfileTableController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCProfileTableController.h; sourceTree = "<group>"; };
 		843C2CF81D336A8A009EFA3C /* WCProfileTableController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCProfileTableController.m; sourceTree = "<group>"; };
+		84E48CFB1D33A2CB00A4D89B /* WCNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCNavigationController.h; sourceTree = "<group>"; };
+		84E48CFC1D33A2CB00A4D89B /* WCNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCNavigationController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -396,6 +399,8 @@
 		84163C4C1D2BF876003BA2A6 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				84E48CFB1D33A2CB00A4D89B /* WCNavigationController.h */,
+				84E48CFC1D33A2CB00A4D89B /* WCNavigationController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -680,8 +685,8 @@
 		84163CE01D2BF876003BA2A6 /* Message */ = {
 			isa = PBXGroup;
 			children = (
-				84163CE11D2BF876003BA2A6 /* Controllers */,
 				84163CE21D2BF876003BA2A6 /* Message.storyboard */,
+				84163CE11D2BF876003BA2A6 /* Controllers */,
 				84163CE31D2BF876003BA2A6 /* Models */,
 				84163CE41D2BF876003BA2A6 /* Views */,
 			);
@@ -912,6 +917,7 @@
 				843C2CF91D336A8A009EFA3C /* WCProfileTableController.m in Sources */,
 				84163D061D2BF876003BA2A6 /* UIScrollView+MJExtension.m in Sources */,
 				84163CEE1D2BF876003BA2A6 /* AFURLRequestSerialization.m in Sources */,
+				84E48CFD1D33A2CB00A4D89B /* WCNavigationController.m in Sources */,
 				84163CFE1D2BF876003BA2A6 /* MJRefreshBackGifFooter.m in Sources */,
 				84163D091D2BF876003BA2A6 /* MKAnnotationView+WebCache.m in Sources */,
 				84163CF81D2BF876003BA2A6 /* MJRefreshComponent.m in Sources */,

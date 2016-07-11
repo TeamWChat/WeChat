@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 #ignore .a file
 *.a
 =======
@@ -62,4 +61,4 @@ fastlane/screenshots
 # https://github.com/johnno1962/injectionforxcode
 
 iOSInjectionProject/
->>>>>>> 558863f01573452972c606720ff922696994ae35
+

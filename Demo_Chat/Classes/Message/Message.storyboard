@@ -28,7 +28,11 @@
                             <outlet property="delegate" destination="6SR-o2-JUc" id="0By-lg-1ZG"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="消息" id="PLu-Oe-f0r"/>
+                    <navigationItem key="navigationItem" title="消息" id="PLu-Oe-f0r">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="jHV-Np-obg">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1jr-jL-RUC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -37,8 +41,8 @@
         <!--消息-->
         <scene sceneID="E1Y-QO-4ir">
             <objects>
-                <navigationController id="2EX-cF-8hL" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="消息" id="Fnq-kU-Y2D"/>
+                <navigationController id="2EX-cF-8hL" customClass="WCNavigationController" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="消息" image="tabbar_mainframe" selectedImage="tabbar_mainframeHL" id="Fnq-kU-Y2D"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="iYI-b7-bqS">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -53,4 +57,8 @@
             <point key="canvasLocation" x="-140" y="-572"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="tabbar_mainframe" width="25" height="23"/>
+        <image name="tabbar_mainframeHL" width="25" height="23"/>
+    </resources>
 </document>

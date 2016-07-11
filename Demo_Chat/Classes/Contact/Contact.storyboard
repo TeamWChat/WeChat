@@ -37,8 +37,8 @@
         <!--通讯录-->
         <scene sceneID="FVC-Wb-d0V">
             <objects>
-                <navigationController id="Xfq-to-IHE" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="通讯录" id="ksK-Sk-Z12"/>
+                <navigationController id="Xfq-to-IHE" customClass="WCNavigationController" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="通讯录" image="tabbar_contacts" selectedImage="tabbar_contactsHL" id="ksK-Sk-Z12"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="f7t-yM-CGF">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -53,4 +53,8 @@
             <point key="canvasLocation" x="-782" y="-312"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="tabbar_contacts" width="27" height="23"/>
+        <image name="tabbar_contactsHL" width="27" height="23"/>
+    </resources>
 </document>

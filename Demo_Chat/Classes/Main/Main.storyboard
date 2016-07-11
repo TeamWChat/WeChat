@@ -9,7 +9,7 @@
         <scene sceneID="inl-FK-KQG">
             <objects>
                 <tabBarController id="CUW-TV-sgR" sceneMemberID="viewController">
-                    <tabBar key="tabBar" contentMode="scaleToFill" id="ryg-Vb-aYG">
+                    <tabBar key="tabBar" contentMode="scaleToFill" backgroundImage="tabbarBkg" id="ryg-Vb-aYG">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -55,4 +55,7 @@
             <point key="canvasLocation" x="293" y="361"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="tabbarBkg" width="5" height="49"/>
+    </resources>
 </document>
