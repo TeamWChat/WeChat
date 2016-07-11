@@ -62,7 +62,12 @@
 		84163D191D2BF876003BA2A6 /* Message.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84163CE21D2BF876003BA2A6 /* Message.storyboard */; };
 		84163D1A1D2BF876003BA2A6 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84163CE81D2BF876003BA2A6 /* Profile.storyboard */; };
 		84163D1C1D2BF8B4003BA2A6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84163D1B1D2BF8B4003BA2A6 /* Main.storyboard */; };
-		84163D1E1D2BF919003BA2A6 /* libHyphenateFullSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 84163D1D1D2BF919003BA2A6 /* libHyphenateFullSDK.a */; };
+		843C2CE71D336984009EFA3C /* libHyphenateFullSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 843C2CE61D336984009EFA3C /* libHyphenateFullSDK.a */; };
+		843C2CED1D336A39009EFA3C /* WCContactDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 843C2CEC1D336A39009EFA3C /* WCContactDetailController.m */; };
+		843C2CF01D336A4E009EFA3C /* WCContactTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = 843C2CEF1D336A4E009EFA3C /* WCContactTableController.m */; };
+		843C2CF31D336A63009EFA3C /* WCMessageListTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = 843C2CF21D336A63009EFA3C /* WCMessageListTableController.m */; };
+		843C2CF61D336A77009EFA3C /* WCChatTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = 843C2CF51D336A77009EFA3C /* WCChatTableController.m */; };
+		843C2CF91D336A8A009EFA3C /* WCProfileTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = 843C2CF81D336A8A009EFA3C /* WCProfileTableController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -227,7 +232,17 @@
 		84163CE21D2BF876003BA2A6 /* Message.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Message.storyboard; sourceTree = "<group>"; };
 		84163CE81D2BF876003BA2A6 /* Profile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 		84163D1B1D2BF8B4003BA2A6 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		84163D1D1D2BF919003BA2A6 /* libHyphenateFullSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libHyphenateFullSDK.a; sourceTree = "<group>"; };
+		843C2CE61D336984009EFA3C /* libHyphenateFullSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libHyphenateFullSDK.a; sourceTree = "<group>"; };
+		843C2CEB1D336A39009EFA3C /* WCContactDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCContactDetailController.h; sourceTree = "<group>"; };
+		843C2CEC1D336A39009EFA3C /* WCContactDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCContactDetailController.m; sourceTree = "<group>"; };
+		843C2CEE1D336A4E009EFA3C /* WCContactTableController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCContactTableController.h; sourceTree = "<group>"; };
+		843C2CEF1D336A4E009EFA3C /* WCContactTableController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCContactTableController.m; sourceTree = "<group>"; };
+		843C2CF11D336A63009EFA3C /* WCMessageListTableController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCMessageListTableController.h; sourceTree = "<group>"; };
+		843C2CF21D336A63009EFA3C /* WCMessageListTableController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCMessageListTableController.m; sourceTree = "<group>"; };
+		843C2CF41D336A77009EFA3C /* WCChatTableController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCChatTableController.h; sourceTree = "<group>"; };
+		843C2CF51D336A77009EFA3C /* WCChatTableController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCChatTableController.m; sourceTree = "<group>"; };
+		843C2CF71D336A8A009EFA3C /* WCProfileTableController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCProfileTableController.h; sourceTree = "<group>"; };
+		843C2CF81D336A8A009EFA3C /* WCProfileTableController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCProfileTableController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -237,7 +252,7 @@
 			files = (
 				84163CF11D2BF876003BA2A6 /* libcrypto.a in Frameworks */,
 				84163CF21D2BF876003BA2A6 /* libcurl.a in Frameworks */,
-				84163D1E1D2BF919003BA2A6 /* libHyphenateFullSDK.a in Frameworks */,
+				843C2CE71D336984009EFA3C /* libHyphenateFullSDK.a in Frameworks */,
 				84163CF31D2BF876003BA2A6 /* libssl.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -342,6 +357,10 @@
 		84163C481D2BF876003BA2A6 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				843C2CEB1D336A39009EFA3C /* WCContactDetailController.h */,
+				843C2CEC1D336A39009EFA3C /* WCContactDetailController.m */,
+				843C2CEE1D336A4E009EFA3C /* WCContactTableController.h */,
+				843C2CEF1D336A4E009EFA3C /* WCContactTableController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -470,7 +489,7 @@
 		84163C841D2BF876003BA2A6 /* lib */ = {
 			isa = PBXGroup;
 			children = (
-				84163D1D1D2BF919003BA2A6 /* libHyphenateFullSDK.a */,
+				843C2CE61D336984009EFA3C /* libHyphenateFullSDK.a */,
 				84163C851D2BF876003BA2A6 /* 3rdparty */,
 			);
 			path = lib;
@@ -672,6 +691,10 @@
 		84163CE11D2BF876003BA2A6 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				843C2CF11D336A63009EFA3C /* WCMessageListTableController.h */,
+				843C2CF21D336A63009EFA3C /* WCMessageListTableController.m */,
+				843C2CF41D336A77009EFA3C /* WCChatTableController.h */,
+				843C2CF51D336A77009EFA3C /* WCChatTableController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -704,6 +727,8 @@
 		84163CE61D2BF876003BA2A6 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				843C2CF71D336A8A009EFA3C /* WCProfileTableController.h */,
+				843C2CF81D336A8A009EFA3C /* WCProfileTableController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -868,6 +893,7 @@
 				84163C141D2BF84B003BA2A6 /* main.m in Sources */,
 				84163D0C1D2BF876003BA2A6 /* SDWebImageCompat.m in Sources */,
 				84163CFF1D2BF876003BA2A6 /* MJRefreshBackNormalFooter.m in Sources */,
+				843C2CF31D336A63009EFA3C /* WCMessageListTableController.m in Sources */,
 				84163D161D2BF876003BA2A6 /* UIImageView+HighlightedWebCache.m in Sources */,
 				84163D111D2BF876003BA2A6 /* SDWebImagePrefetcher.m in Sources */,
 				84163D0F1D2BF876003BA2A6 /* SDWebImageDownloaderOperation.m in Sources */,
@@ -883,16 +909,20 @@
 				84163D171D2BF876003BA2A6 /* UIImageView+WebCache.m in Sources */,
 				84163D101D2BF876003BA2A6 /* SDWebImageManager.m in Sources */,
 				84163CFB1D2BF876003BA2A6 /* MJRefreshAutoGifFooter.m in Sources */,
+				843C2CF91D336A8A009EFA3C /* WCProfileTableController.m in Sources */,
 				84163D061D2BF876003BA2A6 /* UIScrollView+MJExtension.m in Sources */,
 				84163CEE1D2BF876003BA2A6 /* AFURLRequestSerialization.m in Sources */,
 				84163CFE1D2BF876003BA2A6 /* MJRefreshBackGifFooter.m in Sources */,
 				84163D091D2BF876003BA2A6 /* MKAnnotationView+WebCache.m in Sources */,
 				84163CF81D2BF876003BA2A6 /* MJRefreshComponent.m in Sources */,
+				843C2CED1D336A39009EFA3C /* WCContactDetailController.m in Sources */,
 				84163CF51D2BF876003BA2A6 /* MBProgressHUD.m in Sources */,
 				84163CFA1D2BF876003BA2A6 /* MJRefreshHeader.m in Sources */,
 				84163D141D2BF876003BA2A6 /* UIImage+MultiFormat.m in Sources */,
 				84163D151D2BF876003BA2A6 /* UIImage+WebP.m in Sources */,
 				84163D121D2BF876003BA2A6 /* UIButton+WebCache.m in Sources */,
+				843C2CF61D336A77009EFA3C /* WCChatTableController.m in Sources */,
+				843C2CF01D336A4E009EFA3C /* WCContactTableController.m in Sources */,
 				84163CEF1D2BF876003BA2A6 /* AFURLResponseSerialization.m in Sources */,
 				84163CEB1D2BF876003BA2A6 /* AFHTTPSessionManager.m in Sources */,
 				84163CF61D2BF876003BA2A6 /* MJRefreshAutoFooter.m in Sources */,
@@ -1124,6 +1154,7 @@
 				84163C3E1D2BF84B003BA2A6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		84163C3F1D2BF84B003BA2A6 /* Build configuration list for PBXNativeTarget "Demo_ChatTests" */ = {
 			isa = XCConfigurationList;
@@ -1132,6 +1163,7 @@
 				84163C411D2BF84B003BA2A6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		84163C421D2BF84B003BA2A6 /* Build configuration list for PBXNativeTarget "Demo_ChatUITests" */ = {
 			isa = XCConfigurationList;
@@ -1140,6 +1172,7 @@
 				84163C441D2BF84B003BA2A6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
