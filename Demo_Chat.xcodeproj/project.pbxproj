@@ -297,6 +297,7 @@
 		84163C111D2BF84B003BA2A6 /* Demo_Chat */ = {
 			isa = PBXGroup;
 			children = (
+				C29DDD751D337A8A00DEA8CB /* resoucre */,
 				84163C451D2BF876003BA2A6 /* Classes */,
 				84163C1E1D2BF84B003BA2A6 /* Assets.xcassets */,
 				84163C201D2BF84B003BA2A6 /* LaunchScreen.storyboard */,
@@ -745,6 +746,13 @@
 			children = (
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		C29DDD751D337A8A00DEA8CB /* resoucre */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = resoucre;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
