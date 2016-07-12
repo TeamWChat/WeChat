@@ -7,9 +7,11 @@
 //
 
 #import "WCProfileTableController.h"
+#import "WCProfileHeadCell.h"
+#import "WCProfileCell.h"
 
 @interface WCProfileTableController ()
-
+@property (nonatomic,strong) NSArray *cas;
 @end
 
 @implementation WCProfileTableController
@@ -22,7 +24,28 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+
+
 }
+
+-(NSArray *)cas
+{
+    if (!_cas) {
+        NSArray *array0 = @[];
+        NSArray *array1 = @[@"相册",@"收藏",@"钱包",@"卡包"];
+        NSArray *array2 = @[@"表情"];
+        NSArray *array3 = @[@"设置"];
+        
+        NSMutableArray *arrayM = [[NSMutableArray alloc] initWithObjects:array0,array1,array2,array3, nil];
+        
+        _cas = [arrayM mutableCopy];
+    
+        
+    }
+    return _cas;
+}
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -32,24 +55,48 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
+
+    return 4;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
-    return 0;
+    if (section == 1) {
+        return 4;
+    }
+    
+    return 1;
 }
 
-/*
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
     
-    // Configure the cell...
+    if (indexPath.section == 0) {
+        WCProfileHeadCell *cell = [WCProfileHeadCell  weHeadCellWithTabelView:tableView];
+        
+        return cell;
+    }
+    else
+    {
+        WCProfileCell *cell = [WCProfileCell weCellWithTabelView:tableView];
+        NSInteger section = indexPath.section;
+        NSInteger row = indexPath.row;
+        NSArray *array = self.cas[section];
+        cell.whatLabel.text = array[row];
+        cell.iconImageView.image = [UIImage imageNamed:array[row]];
+        return cell;
+    }
     
-    return cell;
+    
+    return nil;
 }
-*/
+
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (indexPath.section == 0) {
+        return 80;
+    }
+    return 40;
+}
 
 /*
 // Override to support conditional editing of the table view.
