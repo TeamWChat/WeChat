@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="WCInputView">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="49"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2K9-Uf-h78" userLabel="ToolBar">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="49"/>
+                    <subviews>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8qU-fu-g4c">
+                            <rect key="frame" x="45" y="9" width="470" height="30"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kjg-l4-6FJ" userLabel="ShowButton">
+                            <rect key="frame" x="560" y="7" width="35" height="35"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="35" id="QfK-Wp-5GX"/>
+                                <constraint firstAttribute="height" constant="35" id="vFg-i0-9EW"/>
+                            </constraints>
+                            <state key="normal" backgroundImage="TypeSelectorBtn_Black"/>
+                            <state key="highlighted" backgroundImage="TypeSelectorBtnHL_Black"/>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8dd-kh-z4Q" userLabel="EmojiButton">
+                            <rect key="frame" x="520" y="7" width="35" height="35"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="35" id="15d-Nd-Bi1"/>
+                                <constraint firstAttribute="height" constant="35" id="HeT-VG-kpG"/>
+                            </constraints>
+                            <state key="normal" backgroundImage="ToolViewEmotion"/>
+                            <state key="selected" backgroundImage="ToolViewKeyboard"/>
+                            <state key="highlighted" backgroundImage="ToolViewEmotionHL"/>
+                            <state key="focused" backgroundImage="ToolViewKeyboardHL"/>
+                        </button>
+                        <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eDG-o7-6C5" userLabel="KeyboardButton">
+                            <rect key="frame" x="520" y="7" width="35" height="35"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="35" id="8j3-OB-gw0"/>
+                                <constraint firstAttribute="height" constant="35" id="Fmm-hc-Kcy"/>
+                            </constraints>
+                            <state key="normal" backgroundImage="ToolViewKeyboard"/>
+                            <state key="highlighted" backgroundImage="ToolViewKeyboardHL"/>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tUT-zS-ZeS" userLabel="InputVoiceButton">
+                            <rect key="frame" x="5" y="7" width="35" height="35"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="35" id="6qN-Rd-9Pw"/>
+                                <constraint firstAttribute="height" constant="35" id="EHZ-m3-moB"/>
+                            </constraints>
+                            <state key="normal" backgroundImage="ToolViewInputVoice"/>
+                            <state key="highlighted" backgroundImage="ToolViewInputVoiceHL"/>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstItem="eDG-o7-6C5" firstAttribute="centerY" secondItem="8dd-kh-z4Q" secondAttribute="centerY" id="9WT-Ga-8V1"/>
+                        <constraint firstItem="tUT-zS-ZeS" firstAttribute="centerY" secondItem="2K9-Uf-h78" secondAttribute="centerY" id="H8l-nz-Qx6"/>
+                        <constraint firstItem="eDG-o7-6C5" firstAttribute="centerX" secondItem="8dd-kh-z4Q" secondAttribute="centerX" id="P7Y-v3-XLz"/>
+                        <constraint firstItem="tUT-zS-ZeS" firstAttribute="leading" secondItem="2K9-Uf-h78" secondAttribute="leading" constant="5" id="QTX-C5-P4m"/>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="49" id="Uem-az-CYD"/>
+                        <constraint firstItem="eDG-o7-6C5" firstAttribute="leading" secondItem="8qU-fu-g4c" secondAttribute="trailing" constant="5" id="aVY-Le-LOW"/>
+                        <constraint firstItem="8qU-fu-g4c" firstAttribute="centerY" secondItem="2K9-Uf-h78" secondAttribute="centerY" id="go6-04-pII"/>
+                        <constraint firstItem="Kjg-l4-6FJ" firstAttribute="leading" secondItem="8dd-kh-z4Q" secondAttribute="trailing" constant="5" id="iMG-vc-5Uh"/>
+                        <constraint firstAttribute="height" constant="49" id="jTF-4T-My3"/>
+                        <constraint firstItem="8qU-fu-g4c" firstAttribute="leading" secondItem="tUT-zS-ZeS" secondAttribute="trailing" constant="5" id="kBj-rw-UbZ"/>
+                        <constraint firstItem="Kjg-l4-6FJ" firstAttribute="centerY" secondItem="2K9-Uf-h78" secondAttribute="centerY" id="mSg-PA-17y"/>
+                        <constraint firstItem="8dd-kh-z4Q" firstAttribute="centerY" secondItem="2K9-Uf-h78" secondAttribute="centerY" id="y5I-1B-mat"/>
+                        <constraint firstAttribute="trailing" secondItem="Kjg-l4-6FJ" secondAttribute="trailing" constant="5" id="zdJ-BY-e6B"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="2K9-Uf-h78" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="XiU-Xg-b5C"/>
+                <constraint firstAttribute="trailing" secondItem="2K9-Uf-h78" secondAttribute="trailing" id="iz4-Qh-XR2"/>
+                <constraint firstItem="2K9-Uf-h78" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="r2x-Zs-3tn"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="441" y="103.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="ToolViewEmotion" width="35" height="35"/>
+        <image name="ToolViewEmotionHL" width="35" height="35"/>
+        <image name="ToolViewInputVoice" width="35" height="35"/>
+        <image name="ToolViewInputVoiceHL" width="35" height="35"/>
+        <image name="ToolViewKeyboard" width="35" height="35"/>
+        <image name="ToolViewKeyboardHL" width="35" height="35"/>
+        <image name="TypeSelectorBtnHL_Black" width="35" height="35"/>
+        <image name="TypeSelectorBtn_Black" width="35" height="35"/>
+    </resources>
+</document>

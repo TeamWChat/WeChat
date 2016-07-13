@@ -1,5 +1,5 @@
 //
-//  WCChatTableController.h
+//  WCInputView.h
 //  Demo_Chat
 //
 //  Created by admin on 16/7/11.
@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface WCChatTableController : UIViewController
+@interface WCInputView : UIView
+
++ (instancetype)inputView;
+
 
 @end
