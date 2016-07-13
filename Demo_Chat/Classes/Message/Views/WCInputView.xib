@@ -58,7 +58,7 @@
                             <state key="highlighted" backgroundImage="ToolViewInputVoiceHL"/>
                         </button>
                     </subviews>
-                    <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstItem="eDG-o7-6C5" firstAttribute="centerY" secondItem="8dd-kh-z4Q" secondAttribute="centerY" id="9WT-Ga-8V1"/>
                         <constraint firstItem="tUT-zS-ZeS" firstAttribute="centerY" secondItem="2K9-Uf-h78" secondAttribute="centerY" id="H8l-nz-Qx6"/>

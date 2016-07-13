@@ -852,6 +852,7 @@
 				TargetAttributes = {
 					84163C0E1D2BF84B003BA2A6 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 647WB9JJ66;
 					};
 					84163C271D2BF84B003BA2A6 = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -1105,6 +1106,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PREFIX_HEADER = "$(SRCROOT)/Demo_Chat/PrefixHeader.pch";
 				INFOPLIST_FILE = Demo_Chat/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1115,6 +1118,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "YZ.Lin.Demo-Chat";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -1122,6 +1126,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PREFIX_HEADER = "$(SRCROOT)/Demo_Chat/PrefixHeader.pch";
 				INFOPLIST_FILE = Demo_Chat/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1132,6 +1138,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "YZ.Lin.Demo-Chat";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

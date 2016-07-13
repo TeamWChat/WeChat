@@ -12,5 +12,4 @@
 
 + (instancetype)inputView;
 
-
 @end

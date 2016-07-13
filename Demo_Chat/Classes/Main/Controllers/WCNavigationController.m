@@ -21,6 +21,7 @@
     
     self.navigationBar.barTintColor = [UIColor blackColor];
     self.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName:[UIColor whiteColor]};
+    self.navigationBar.tintColor = [UIColor whiteColor];
 }
 
 - (UIStatusBarStyle)preferredStatusBarStyle {

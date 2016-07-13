@@ -15,6 +15,7 @@ static const CGFloat kInputViewHeight = 49;
 
 @interface WCOutputToolManager ()
 
+@property (nonatomic, weak) UIViewController *superViewController;
 @property (nonatomic, weak) WCInputView *inputView;
 @property (nonatomic, strong) NSLayoutConstraint *topConstraint;
 
@@ -25,10 +26,17 @@ static const CGFloat kInputViewHeight = 49;
 #pragma mark - Initialization
 
 + (instancetype)showInSupperController:(UIViewController *)superViewController {
-    WCOutputToolManager *manager = [[self alloc] init];
-    [superViewController addChildViewController:manager];
-    [superViewController.view addSubview:manager.view];
+    WCOutputToolManager *manager = [[self alloc] initWithParentViewController:superViewController];
     return manager;
+}
+
+- (instancetype)initWithParentViewController:(UIViewController *)viewController {
+    self = [super init];
+    if (self) {
+        _superViewController = viewController;
+        [self.view layoutIfNeeded];
+    }
+    return self;
 }
 
 - (void)viewDidLoad {
@@ -63,9 +71,14 @@ static const CGFloat kInputViewHeight = 49;
 
 - (void)setupUI {
     
-    [self.parentViewController.view addSubview:self.view];
+    [self bindingParentViewController];
     [self setupInputView];
     [self setupConstraint];
+}
+
+- (void)bindingParentViewController {
+    [self.superViewController addChildViewController:self];
+    [self.superViewController.view addSubview:self.view];
 }
 
 - (void)setupInputView {
@@ -109,19 +122,18 @@ static const CGFloat kInputViewHeight = 49;
     CGFloat duration = [notification.userInfo[UIKeyboardAnimationDurationUserInfoKey] doubleValue];
     self.topConstraint.constant = kDefaultTopConstraint;
     
-    [UIView animateWithDuration:duration
-                     animations:^{
-                         [self.view layoutIfNeeded];
-                     } completion:^(BOOL finished) {
-                         _canHideKeyboard = NO;
-                     }];
+    [UIView animateWithDuration:duration animations:^{
+        [self.view layoutIfNeeded];
+    }completion:^(BOOL finished) {
+        _canHideKeyboard = NO;
+    }];
 }
 
 #pragma mark - Public Method
 
 - (void)endTyping {
     if (_canHideKeyboard) {
-        [self.view endEditing:YES];
+        [self.inputView endEditing:YES];
     }
 }
 
