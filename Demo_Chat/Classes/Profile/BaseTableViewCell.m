@@ -63,58 +63,13 @@
         make.size.mas_equalTo(CGSizeMake(60, 60));
     }];
     [_rightImageView sd_setImageWithURL:[NSURL URLWithString:url] completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
-        [self writeImageToPlist:image];
+        [CommonUtils writeImageToDB:image];
     }];
     
 }
 
-//将图片写入plist文件
--(void)writeImageToPlist:(UIImage *)image
-{
-    //获取沙盒路径，
-    NSString *path_sandox = NSHomeDirectory();
-    //创建一个存储plist文件的路径
-    NSString *newPath = [path_sandox stringByAppendingPathComponent:@"/Documents/pic.plist"];
-    NSMutableArray *arr = [[NSMutableArray alloc] init];
-    //把图片转换为Base64的字符串
-    NSData *data = UIImageJPEGRepresentation(image, 1);
-    NSString *image64 = [data base64EncodedStringWithOptions:NSDataBase64Encoding64CharacterLineLength];
-    [arr addObject:image64];
-    //写入plist文件
-    if ([arr writeToFile:newPath atomically:YES]) {
-        NSLog(@"写入成功");
-    };
-    
-    
-    //1.获得数据库文件的路径
-    NSString *doc =[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,NSUserDomainMask, YES)  lastObject];
-    
-    NSString *fileName = [doc stringByAppendingPathComponent:@"pic.sqlite"];
-    
-    //2.获得数据库
-    FMDatabase *db = [FMDatabase databaseWithPath:fileName];
-    if ([db open]) {
-        BOOL ret = [db executeUpdate:@"create table if not exists t_pic (photo blob)"];
-        if (ret) {
-            NSLog(@"添加成功");
-        }
-        else
-        {
-            NSLog(@"添加失败");
-        }
-    }
-    if ([db open]) {
-        BOOL ret = [db executeUpdate:@"insert into t_pic (photo) values (?)",data];
-        if (ret) {
-            NSLog(@"图片添加成功");
-        }
-        else
-        {
-            NSLog(@"图片添加失败");
-        }
-    }
-    [db close];
-}
+
+
 
 +(instancetype)baseCellWithTableView:(UITableView *)tableView
 {

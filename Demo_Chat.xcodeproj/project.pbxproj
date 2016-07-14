@@ -102,7 +102,9 @@
 		C28B67631D36399B001C9A22 /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = C28B675C1D36399B001C9A22 /* FMDatabasePool.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		C28B67641D36399B001C9A22 /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = C28B675E1D36399B001C9A22 /* FMDatabaseQueue.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		C28B67651D36399B001C9A22 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = C28B67601D36399B001C9A22 /* FMResultSet.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		C28B67671D364FFC001C9A22 /* 120x120-01.png in Resources */ = {isa = PBXBuildFile; fileRef = C28B67661D364FFC001C9A22 /* 120x120-01.png */; };
+		C28B676A1D3728C0001C9A22 /* FMDBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C28B67691D3728C0001C9A22 /* FMDBManager.m */; };
+		C28B676C1D37753B001C9A22 /* 更多信息.png in Resources */ = {isa = PBXBuildFile; fileRef = C28B676B1D37753B001C9A22 /* 更多信息.png */; };
+		C28B67721D378187001C9A22 /* WeChatAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = C28B67711D378187001C9A22 /* WeChatAlert.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -341,7 +343,11 @@
 		C28B675E1D36399B001C9A22 /* FMDatabaseQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseQueue.m; sourceTree = "<group>"; };
 		C28B675F1D36399B001C9A22 /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
 		C28B67601D36399B001C9A22 /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
-		C28B67661D364FFC001C9A22 /* 120x120-01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "120x120-01.png"; sourceTree = "<group>"; };
+		C28B67681D3728C0001C9A22 /* FMDBManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FMDBManager.h; path = Demo_Chat/Classes/Main/FMDBManager.h; sourceTree = SOURCE_ROOT; };
+		C28B67691D3728C0001C9A22 /* FMDBManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FMDBManager.m; path = Demo_Chat/Classes/Main/FMDBManager.m; sourceTree = SOURCE_ROOT; };
+		C28B676B1D37753B001C9A22 /* 更多信息.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "更多信息.png"; sourceTree = "<group>"; };
+		C28B67701D378187001C9A22 /* WeChatAlert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WeChatAlert.h; path = Demo_Chat/Classes/Main/WeChatAlert.h; sourceTree = SOURCE_ROOT; };
+		C28B67711D378187001C9A22 /* WeChatAlert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WeChatAlert.m; path = Demo_Chat/Classes/Main/WeChatAlert.m; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -775,6 +781,10 @@
 			children = (
 				C28B674B1D361281001C9A22 /* CommonUtils.h */,
 				C28B674C1D361281001C9A22 /* CommonUtils.m */,
+				C28B67681D3728C0001C9A22 /* FMDBManager.h */,
+				C28B67691D3728C0001C9A22 /* FMDBManager.m */,
+				C28B67701D378187001C9A22 /* WeChatAlert.h */,
+				C28B67711D378187001C9A22 /* WeChatAlert.m */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -838,13 +848,12 @@
 			children = (
 				843C2CF71D336A8A009EFA3C /* WCProfileTableController.h */,
 				843C2CF81D336A8A009EFA3C /* WCProfileTableController.m */,
-				C28B67131D34E3F3001C9A22 /* WCProfileWebViewController.h */,
-				C28B67141D34E3F3001C9A22 /* WCProfileWebViewController.m */,
 				C28B671C1D35D9B0001C9A22 /* WCProfileMineInfoViewController.h */,
 				C28B671D1D35D9B0001C9A22 /* WCProfileMineInfoViewController.m */,
 				C28B67511D362BAA001C9A22 /* AvatarSetViewController.h */,
 				C28B67521D362BAA001C9A22 /* AvatarSetViewController.m */,
-				C28B67661D364FFC001C9A22 /* 120x120-01.png */,
+				C28B67131D34E3F3001C9A22 /* WCProfileWebViewController.h */,
+				C28B67141D34E3F3001C9A22 /* WCProfileWebViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -890,6 +899,7 @@
 				C28B67071D34CF5C001C9A22 /* 表情.png */,
 				C28B67081D34CF5C001C9A22 /* 设置.png */,
 				C28B67091D34CF5C001C9A22 /* 钱包.png */,
+				C28B676B1D37753B001C9A22 /* 更多信息.png */,
 			);
 			path = "我的icon";
 			sourceTree = "<group>";
@@ -1060,8 +1070,8 @@
 				C28B670A1D34CF5C001C9A22 /* 卡包.png in Resources */,
 				C28B670F1D34CF5C001C9A22 /* 钱包.png in Resources */,
 				84163D041D2BF876003BA2A6 /* MJRefresh.bundle in Resources */,
-				C28B67671D364FFC001C9A22 /* 120x120-01.png in Resources */,
 				C28B66FA1D348C6A001C9A22 /* WCProfileCell.xib in Resources */,
+				C28B676C1D37753B001C9A22 /* 更多信息.png in Resources */,
 				84163D191D2BF876003BA2A6 /* Message.storyboard in Resources */,
 				84163D1A1D2BF876003BA2A6 /* Profile.storyboard in Resources */,
 			);
@@ -1100,6 +1110,7 @@
 				C28B66FE1D3498D7001C9A22 /* WCProfileHeadCell.m in Sources */,
 				84163D0B1D2BF876003BA2A6 /* SDImageCache.m in Sources */,
 				C28B674D1D361281001C9A22 /* CommonUtils.m in Sources */,
+				C28B67721D378187001C9A22 /* WeChatAlert.m in Sources */,
 				84163C141D2BF84B003BA2A6 /* main.m in Sources */,
 				84163D0C1D2BF876003BA2A6 /* SDWebImageCompat.m in Sources */,
 				84163CFF1D2BF876003BA2A6 /* MJRefreshBackNormalFooter.m in Sources */,
@@ -1156,6 +1167,7 @@
 				84163CF61D2BF876003BA2A6 /* MJRefreshAutoFooter.m in Sources */,
 				84163CF91D2BF876003BA2A6 /* MJRefreshFooter.m in Sources */,
 				84163D001D2BF876003BA2A6 /* MJRefreshBackStateFooter.m in Sources */,
+				C28B676A1D3728C0001C9A22 /* FMDBManager.m in Sources */,
 				84163D051D2BF876003BA2A6 /* MJRefreshConst.m in Sources */,
 				C28B67611D36399B001C9A22 /* FMDatabase.m in Sources */,
 				C28B67461D360DC9001C9A22 /* View+MASAdditions.m in Sources */,
