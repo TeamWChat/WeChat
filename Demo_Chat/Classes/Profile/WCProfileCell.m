@@ -8,6 +8,7 @@
 
 #import "WCProfileCell.h"
 
+
 @implementation WCProfileCell
 
 +(instancetype)weCellWithTabelView:(UITableView *)tableView
@@ -17,16 +18,16 @@
     
     if (cell==nil) {
         cell = [[[NSBundle mainBundle] loadNibNamed:@"WCProfileCell" owner:nil options:nil] firstObject];
-        cell.selectionStyle = UITableViewCellSelectionStyleNone;
     }
     return cell;
 }
 
 
--(void)layoutSubviews
+
++(CGFloat)weProfileCellAddHeight
 {
-    [super layoutSubviews];
-//    self.whatLabel.text = @"afds";
+    
+    return 80;
 }
 
 - (void)awakeFromNib {

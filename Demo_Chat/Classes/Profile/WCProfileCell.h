@@ -8,8 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@interface WCProfileCell : UITableViewCell
-@property (strong, nonatomic) IBOutlet UIImageView *iconImageView;
-@property (strong, nonatomic) IBOutlet UILabel *whatLabel;
+@interface WCProfileCell : BaseTableViewCell
+@property (weak, nonatomic) IBOutlet UIImageView *iconImageView;
+@property (weak, nonatomic) IBOutlet UILabel *whatLabel;
+
+
 +(instancetype)weCellWithTabelView:(UITableView *)tableView;
++(CGFloat)weProfileCellAddHeight;
 @end

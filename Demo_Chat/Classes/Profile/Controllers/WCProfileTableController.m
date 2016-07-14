@@ -9,6 +9,8 @@
 #import "WCProfileTableController.h"
 #import "WCProfileHeadCell.h"
 #import "WCProfileCell.h"
+#import "WCProfileWebViewController.h"
+#import "WCProfileMineInfoViewController.h"
 
 @interface WCProfileTableController ()
 @property (nonatomic,strong) NSArray *cas;
@@ -19,12 +21,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-
 
 }
 
@@ -72,7 +68,6 @@
     
     if (indexPath.section == 0) {
         WCProfileHeadCell *cell = [WCProfileHeadCell  weHeadCellWithTabelView:tableView];
-        
         return cell;
     }
     else
@@ -96,6 +91,45 @@
         return 80;
     }
     return 40;
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    switch (indexPath.section) {//第几组
+        case 0://第一组
+              [self.navigationController pushViewController:[WCProfileMineInfoViewController new] animated:YES];
+            break;
+        case 1://第二组
+            switch (indexPath.row) {//第几行
+                    
+                case 0://2.1
+                  
+                    break;
+                case 1://2.2
+                    
+                    break;
+                case 2://2.3
+                    [self.navigationController pushViewController:[WCProfileWebViewController new] animated:YES];
+                    break;
+                case 3://2.4
+                    
+                    break;
+                default:
+                    break;
+            }
+
+            break;
+        case 2://第三组
+            
+            break;
+        case 3://第四组
+            
+            break;
+        default:
+            break;
+    }
+    
+    
 }
 
 /*

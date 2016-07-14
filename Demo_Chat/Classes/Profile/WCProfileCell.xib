@@ -16,10 +16,10 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1rZ-ei-gH8" userLabel="whatLabel">
-                        <rect key="frame" x="53" y="9" width="127" height="21"/>
+                        <rect key="frame" x="53" y="9" width="80" height="21"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="127" id="45E-Is-cE4"/>
                             <constraint firstAttribute="height" constant="21" id="OKk-xK-xaq"/>
+                            <constraint firstAttribute="width" constant="80" id="f5z-Xe-v6Q"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -34,12 +34,14 @@
                     </imageView>
                 </subviews>
                 <constraints>
+                    <constraint firstItem="1rZ-ei-gH8" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" priority="999" constant="13" id="3g3-yf-Gfc"/>
                     <constraint firstItem="bBo-hM-Oas" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="5" id="5PZ-SK-6gC"/>
                     <constraint firstAttribute="bottomMargin" secondItem="bBo-hM-Oas" secondAttribute="bottom" constant="5" id="BCS-fD-0iy"/>
                     <constraint firstItem="bBo-hM-Oas" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="Dt7-jS-vVU"/>
                     <constraint firstItem="1rZ-ei-gH8" firstAttribute="leading" secondItem="bBo-hM-Oas" secondAttribute="trailing" constant="10" id="Ggo-6M-3ZG"/>
                     <constraint firstItem="bBo-hM-Oas" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="5" id="Ke4-pQ-ztJ"/>
                     <constraint firstItem="1rZ-ei-gH8" firstAttribute="centerY" secondItem="bBo-hM-Oas" secondAttribute="centerY" id="pjB-Ud-Tpt"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="1rZ-ei-gH8" secondAttribute="bottom" constant="1" id="quj-yz-ezd"/>
                     <constraint firstItem="1rZ-ei-gH8" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="9" id="tpt-i0-2TD"/>
                 </constraints>
                 <variation key="default">

@@ -8,14 +8,16 @@
 
 #import "WCProfileHeadCell.h"
 
-
+#define avator @"http://ww3.sinaimg.cn/large/610dc034gw1f5pu0w0r56j20m80rsjuy.jpg"
 
 @implementation WCProfileHeadCell
 
 -(void)layoutSubviews
 {
     [super layoutSubviews];
-    [self.avatarImageView sd_setImageWithURL:[NSURL URLWithString:@""]];
+    self.avatarImageView.layer.cornerRadius = 5.f;
+    self.avatarImageView.clipsToBounds = YES;
+    [self.avatarImageView sd_setImageWithURL:[NSURL URLWithString:avator]];
     self.userNameLabel.text = @"zuosdaf";
     self.accountLabel.text = @"15234562";
 }
@@ -27,7 +29,6 @@
     
     if (cell==nil) {
         cell = [[[NSBundle mainBundle] loadNibNamed:@"WCProfileHeadCell" owner:nil options:nil] firstObject];
-        cell.selectionStyle = UITableViewCellSelectionStyleNone;
     }
     return cell;
 }
