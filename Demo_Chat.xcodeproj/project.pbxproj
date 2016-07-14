@@ -285,7 +285,7 @@
 		C28B66FB1D3498D7001C9A22 /* WCProfileHeadCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WCProfileHeadCell.h; path = Demo_Chat/Classes/Profile/WCProfileHeadCell.h; sourceTree = SOURCE_ROOT; };
 		C28B66FC1D3498D7001C9A22 /* WCProfileHeadCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WCProfileHeadCell.m; path = Demo_Chat/Classes/Profile/WCProfileHeadCell.m; sourceTree = SOURCE_ROOT; };
 		C28B66FD1D3498D7001C9A22 /* WCProfileHeadCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = WCProfileHeadCell.xib; path = Demo_Chat/Classes/Profile/WCProfileHeadCell.xib; sourceTree = SOURCE_ROOT; };
-		C28B67011D34A13A001C9A22 /* WeChat.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeChat.pch; sourceTree = "<group>"; };
+		C28B67011D34A13A001C9A22 /* WeChat.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WeChat.pch; path = ../WeChat.pch; sourceTree = "<group>"; };
 		C28B67041D34CF5C001C9A22 /* 卡包.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "卡包.png"; sourceTree = "<group>"; };
 		C28B67051D34CF5C001C9A22 /* 收藏.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "收藏.png"; sourceTree = "<group>"; };
 		C28B67061D34CF5C001C9A22 /* 相册.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "相册.png"; sourceTree = "<group>"; };
@@ -378,7 +378,6 @@
 		84163C061D2BF84B003BA2A6 = {
 			isa = PBXGroup;
 			children = (
-				C28B67011D34A13A001C9A22 /* WeChat.pch */,
 				84163C111D2BF84B003BA2A6 /* Demo_Chat */,
 				84163C2B1D2BF84B003BA2A6 /* Demo_ChatTests */,
 				84163C361D2BF84B003BA2A6 /* Demo_ChatUITests */,
@@ -399,6 +398,7 @@
 		84163C111D2BF84B003BA2A6 /* Demo_Chat */ = {
 			isa = PBXGroup;
 			children = (
+				C28B67011D34A13A001C9A22 /* WeChat.pch */,
 				84163C451D2BF876003BA2A6 /* Classes */,
 				84163C1E1D2BF84B003BA2A6 /* Assets.xcassets */,
 				84163C201D2BF84B003BA2A6 /* LaunchScreen.storyboard */,
