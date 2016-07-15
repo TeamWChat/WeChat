@@ -95,6 +95,7 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    self.hidesBottomBarWhenPushed=YES;
     switch (indexPath.section) {//第几组
         case 0://第一组
               [self.navigationController pushViewController:[WCProfileMineInfoViewController new] animated:YES];
@@ -128,7 +129,7 @@
         default:
             break;
     }
-    
+    self.hidesBottomBarWhenPushed=NO;
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section

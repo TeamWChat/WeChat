@@ -7,6 +7,7 @@
 //
 
 #import "BaseTableViewCell.h"
+#import "WCProfilePersonInfo.h"
 
 
 
@@ -15,7 +16,9 @@
 -(instancetype)initWithCoder:(NSCoder *)aDecoder
 {
     self = [super initWithCoder:aDecoder];
-    [self setStyle];
+    if (self) {
+        [self setStyle];
+    }
     
     return self;
 }
@@ -23,17 +26,27 @@
 -(instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
-    [self setStyle];
-
+    if (self) {
+         [self setStyle];
+    }
+   
     return self;
 }
 
+-(instancetype)initWithAccess:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier isAccess:(UITableViewCellAccessoryType)type
+{
+    self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
+    if (self) {
+        self.accessoryType = type;
+        self.selectionStyle = UITableViewCellSelectionStyleNone;
+    }
+    return self;
+}
 
 //添加contentlabel
--(void)contentLabelAddConstraint:(NSString *)str fontSize:(CGFloat)font
-{
+-(void)contentLabelAddConstraint:(NSString *)str fontSize:(CGFloat)font width:(CGFloat)width height:(CGFloat)height{
     
-    CGSize size = [CommonUtils getLabelSize:str fontSize:font];
+    CGSize size = [CommonUtils getLabelSize:str fontSize:font width:width height:height];
     UILabel * contentLabel = [[UILabel alloc] init];
     _contentLabel = contentLabel;
     [self.contentView addSubview:self.contentLabel];
@@ -46,7 +59,6 @@
         make.right.equalTo(self.contentView.mas_right);
         make.size.mas_equalTo(size);
     }];
-    
 }
 
 //添加右边图片
@@ -84,10 +96,8 @@
 }
 
 -(void)setStyle{
-    if (self) {
         self.selectionStyle = UITableViewCellSelectionStyleNone;
         self.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-    }
 }
 
 

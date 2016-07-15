@@ -80,13 +80,12 @@
 		C24B3EE21D3874A4009F991D /* WCProfileHeadCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C24B3EDB1D3874A4009F991D /* WCProfileHeadCell.m */; };
 		C24B3EE31D3874A4009F991D /* WCProfileHeadCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C24B3EDC1D3874A4009F991D /* WCProfileHeadCell.xib */; };
 		C24B3EE41D3874A4009F991D /* WCProfileWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = C24B3EDE1D3874A4009F991D /* WCProfileWebView.m */; };
+		C24B3EE81D38B76F009F991D /* NameChangeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C24B3EE71D38B76F009F991D /* NameChangeViewController.m */; };
+		C24B3EEB1D38BAB3009F991D /* WCProfilePersonInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = C24B3EEA1D38BAB3009F991D /* WCProfilePersonInfo.m */; };
+		C24B3EEE1D38CE3A009F991D /* AdressViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C24B3EED1D38CE3A009F991D /* AdressViewController.m */; };
+		C24B3EF11D38E1B0009F991D /* WCProfileAdressInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C24B3EF01D38E1B0009F991D /* WCProfileAdressInfoModel.m */; };
+		C24B3EF41D38E6B4009F991D /* AddAdressInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C24B3EF31D38E6B4009F991D /* AddAdressInfoViewController.m */; };
 		C28B66F51D348876001C9A22 /* libHyphenateFullSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C28B66F41D348876001C9A22 /* libHyphenateFullSDK.a */; };
-		C28B670A1D34CF5C001C9A22 /* 卡包.png in Resources */ = {isa = PBXBuildFile; fileRef = C28B67041D34CF5C001C9A22 /* 卡包.png */; };
-		C28B670B1D34CF5C001C9A22 /* 收藏.png in Resources */ = {isa = PBXBuildFile; fileRef = C28B67051D34CF5C001C9A22 /* 收藏.png */; };
-		C28B670C1D34CF5C001C9A22 /* 相册.png in Resources */ = {isa = PBXBuildFile; fileRef = C28B67061D34CF5C001C9A22 /* 相册.png */; };
-		C28B670D1D34CF5C001C9A22 /* 表情.png in Resources */ = {isa = PBXBuildFile; fileRef = C28B67071D34CF5C001C9A22 /* 表情.png */; };
-		C28B670E1D34CF5C001C9A22 /* 设置.png in Resources */ = {isa = PBXBuildFile; fileRef = C28B67081D34CF5C001C9A22 /* 设置.png */; };
-		C28B670F1D34CF5C001C9A22 /* 钱包.png in Resources */ = {isa = PBXBuildFile; fileRef = C28B67091D34CF5C001C9A22 /* 钱包.png */; };
 		C28B67151D34E3F3001C9A22 /* WCProfileWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C28B67141D34E3F3001C9A22 /* WCProfileWebViewController.m */; };
 		C28B671E1D35D9B0001C9A22 /* WCProfileMineInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C28B671D1D35D9B0001C9A22 /* WCProfileMineInfoViewController.m */; };
 		C28B673D1D360DC9001C9A22 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C28B67231D360DC9001C9A22 /* Info.plist */; };
@@ -109,7 +108,6 @@
 		C28B67641D36399B001C9A22 /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = C28B675E1D36399B001C9A22 /* FMDatabaseQueue.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		C28B67651D36399B001C9A22 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = C28B67601D36399B001C9A22 /* FMResultSet.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		C28B676A1D3728C0001C9A22 /* FMDBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C28B67691D3728C0001C9A22 /* FMDBManager.m */; };
-		C28B676C1D37753B001C9A22 /* 更多信息.png in Resources */ = {isa = PBXBuildFile; fileRef = C28B676B1D37753B001C9A22 /* 更多信息.png */; };
 		C28B67721D378187001C9A22 /* WeChatAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = C28B67711D378187001C9A22 /* WeChatAlert.m */; };
 /* End PBXBuildFile section */
 
@@ -308,16 +306,19 @@
 		C24B3EDC1D3874A4009F991D /* WCProfileHeadCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WCProfileHeadCell.xib; sourceTree = "<group>"; };
 		C24B3EDD1D3874A4009F991D /* WCProfileWebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCProfileWebView.h; sourceTree = "<group>"; };
 		C24B3EDE1D3874A4009F991D /* WCProfileWebView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCProfileWebView.m; sourceTree = "<group>"; };
+		C24B3EE61D38B76F009F991D /* NameChangeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NameChangeViewController.h; sourceTree = "<group>"; };
+		C24B3EE71D38B76F009F991D /* NameChangeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NameChangeViewController.m; sourceTree = "<group>"; };
+		C24B3EE91D38BAB3009F991D /* WCProfilePersonInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCProfilePersonInfo.h; sourceTree = "<group>"; };
+		C24B3EEA1D38BAB3009F991D /* WCProfilePersonInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCProfilePersonInfo.m; sourceTree = "<group>"; };
+		C24B3EEC1D38CE3A009F991D /* AdressViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdressViewController.h; sourceTree = "<group>"; };
+		C24B3EED1D38CE3A009F991D /* AdressViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdressViewController.m; sourceTree = "<group>"; };
+		C24B3EEF1D38E1B0009F991D /* WCProfileAdressInfoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCProfileAdressInfoModel.h; sourceTree = "<group>"; };
+		C24B3EF01D38E1B0009F991D /* WCProfileAdressInfoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCProfileAdressInfoModel.m; sourceTree = "<group>"; };
+		C24B3EF21D38E6B4009F991D /* AddAdressInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddAdressInfoViewController.h; sourceTree = "<group>"; };
+		C24B3EF31D38E6B4009F991D /* AddAdressInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddAdressInfoViewController.m; sourceTree = "<group>"; };
 		C28B66F41D348876001C9A22 /* libHyphenateFullSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libHyphenateFullSDK.a; sourceTree = "<group>"; };
-		C28B67011D34A13A001C9A22 /* WeChat.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WeChat.pch; path = ../WeChat.pch; sourceTree = "<group>"; };
-		C28B67041D34CF5C001C9A22 /* 卡包.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "卡包.png"; sourceTree = "<group>"; };
-		C28B67051D34CF5C001C9A22 /* 收藏.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "收藏.png"; sourceTree = "<group>"; };
-		C28B67061D34CF5C001C9A22 /* 相册.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "相册.png"; sourceTree = "<group>"; };
-		C28B67071D34CF5C001C9A22 /* 表情.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "表情.png"; sourceTree = "<group>"; };
-		C28B67081D34CF5C001C9A22 /* 设置.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "设置.png"; sourceTree = "<group>"; };
-		C28B67091D34CF5C001C9A22 /* 钱包.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "钱包.png"; sourceTree = "<group>"; };
-		C28B67131D34E3F3001C9A22 /* WCProfileWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCProfileWebViewController.h; sourceTree = "<group>"; };
-		C28B67141D34E3F3001C9A22 /* WCProfileWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCProfileWebViewController.m; sourceTree = "<group>"; };
+		C28B67131D34E3F3001C9A22 /* WCProfileWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WCProfileWebViewController.h; path = Controllers/WCProfileWebViewController.h; sourceTree = "<group>"; };
+		C28B67141D34E3F3001C9A22 /* WCProfileWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WCProfileWebViewController.m; path = Controllers/WCProfileWebViewController.m; sourceTree = "<group>"; };
 		C28B671C1D35D9B0001C9A22 /* WCProfileMineInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCProfileMineInfoViewController.h; sourceTree = "<group>"; };
 		C28B671D1D35D9B0001C9A22 /* WCProfileMineInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCProfileMineInfoViewController.m; sourceTree = "<group>"; };
 		C28B67231D360DC9001C9A22 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -363,7 +364,6 @@
 		C28B67601D36399B001C9A22 /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
 		C28B67681D3728C0001C9A22 /* FMDBManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FMDBManager.h; path = Demo_Chat/Classes/Main/FMDBManager.h; sourceTree = SOURCE_ROOT; };
 		C28B67691D3728C0001C9A22 /* FMDBManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FMDBManager.m; path = Demo_Chat/Classes/Main/FMDBManager.m; sourceTree = SOURCE_ROOT; };
-		C28B676B1D37753B001C9A22 /* 更多信息.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "更多信息.png"; sourceTree = "<group>"; };
 		C28B67701D378187001C9A22 /* WeChatAlert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WeChatAlert.h; path = Demo_Chat/Classes/Main/WeChatAlert.h; sourceTree = SOURCE_ROOT; };
 		C28B67711D378187001C9A22 /* WeChatAlert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WeChatAlert.m; path = Demo_Chat/Classes/Main/WeChatAlert.m; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
@@ -422,7 +422,6 @@
 		84163C111D2BF84B003BA2A6 /* Demo_Chat */ = {
 			isa = PBXGroup;
 			children = (
-				C28B67011D34A13A001C9A22 /* WeChat.pch */,
 				84163C451D2BF876003BA2A6 /* Classes */,
 				84163C201D2BF84B003BA2A6 /* LaunchScreen.storyboard */,
 				84163C231D2BF84B003BA2A6 /* Info.plist */,
@@ -435,7 +434,6 @@
 		84163C121D2BF84B003BA2A6 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				C28B67021D34CF5C001C9A22 /* resource */,
 				84163C131D2BF84B003BA2A6 /* main.m */,
 				84E48D0A1D33D85A00A4D89B /* PrefixHeader.pch */,
 			);
@@ -868,6 +866,8 @@
 				C24B3ED41D3874A4009F991D /* view */,
 				84163CE61D2BF876003BA2A6 /* Controllers */,
 				84163CE81D2BF876003BA2A6 /* Profile.storyboard */,
+				C28B67131D34E3F3001C9A22 /* WCProfileWebViewController.h */,
+				C28B67141D34E3F3001C9A22 /* WCProfileWebViewController.m */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -881,8 +881,12 @@
 				C28B671D1D35D9B0001C9A22 /* WCProfileMineInfoViewController.m */,
 				C28B67511D362BAA001C9A22 /* AvatarSetViewController.h */,
 				C28B67521D362BAA001C9A22 /* AvatarSetViewController.m */,
-				C28B67131D34E3F3001C9A22 /* WCProfileWebViewController.h */,
-				C28B67141D34E3F3001C9A22 /* WCProfileWebViewController.m */,
+				C24B3EE61D38B76F009F991D /* NameChangeViewController.h */,
+				C24B3EE71D38B76F009F991D /* NameChangeViewController.m */,
+				C24B3EEC1D38CE3A009F991D /* AdressViewController.h */,
+				C24B3EED1D38CE3A009F991D /* AdressViewController.m */,
+				C24B3EF21D38E6B4009F991D /* AddAdressInfoViewController.h */,
+				C24B3EF31D38E6B4009F991D /* AddAdressInfoViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -916,30 +920,12 @@
 		C24B3EE51D3874C9009F991D /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				C24B3EE91D38BAB3009F991D /* WCProfilePersonInfo.h */,
+				C24B3EEA1D38BAB3009F991D /* WCProfilePersonInfo.m */,
+				C24B3EEF1D38E1B0009F991D /* WCProfileAdressInfoModel.h */,
+				C24B3EF01D38E1B0009F991D /* WCProfileAdressInfoModel.m */,
 			);
 			path = Models;
-			sourceTree = "<group>";
-		};
-		C28B67021D34CF5C001C9A22 /* resource */ = {
-			isa = PBXGroup;
-			children = (
-				C28B67031D34CF5C001C9A22 /* 我的icon */,
-			);
-			path = resource;
-			sourceTree = "<group>";
-		};
-		C28B67031D34CF5C001C9A22 /* 我的icon */ = {
-			isa = PBXGroup;
-			children = (
-				C28B67041D34CF5C001C9A22 /* 卡包.png */,
-				C28B67051D34CF5C001C9A22 /* 收藏.png */,
-				C28B67061D34CF5C001C9A22 /* 相册.png */,
-				C28B67071D34CF5C001C9A22 /* 表情.png */,
-				C28B67081D34CF5C001C9A22 /* 设置.png */,
-				C28B67091D34CF5C001C9A22 /* 钱包.png */,
-				C28B676B1D37753B001C9A22 /* 更多信息.png */,
-			);
-			path = "我的icon";
 			sourceTree = "<group>";
 		};
 		C28B67221D360DC9001C9A22 /* Masonry */ = {
@@ -1097,18 +1083,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				C28B673D1D360DC9001C9A22 /* Info.plist in Resources */,
-				C28B670D1D34CF5C001C9A22 /* 表情.png in Resources */,
 				84163D1C1D2BF8B4003BA2A6 /* Main.storyboard in Resources */,
-				C28B670B1D34CF5C001C9A22 /* 收藏.png in Resources */,
 				84163C221D2BF84B003BA2A6 /* LaunchScreen.storyboard in Resources */,
-				C28B670E1D34CF5C001C9A22 /* 设置.png in Resources */,
 				84163CEA1D2BF876003BA2A6 /* Contact.storyboard in Resources */,
-				C28B670C1D34CF5C001C9A22 /* 相册.png in Resources */,
 				C24B3EE31D3874A4009F991D /* WCProfileHeadCell.xib in Resources */,
-				C28B670A1D34CF5C001C9A22 /* 卡包.png in Resources */,
-				C28B670F1D34CF5C001C9A22 /* 钱包.png in Resources */,
 				84163D041D2BF876003BA2A6 /* MJRefresh.bundle in Resources */,
-				C28B676C1D37753B001C9A22 /* 更多信息.png in Resources */,
 				C24B3EE11D3874A4009F991D /* WCProfileCell.xib in Resources */,
 				84163D041D2BF876003BA2A6 /* MJRefresh.bundle in Resources */,
 				84E48CFF1D33CDA600A4D89B /* Assets.xcassets in Resources */,
@@ -1144,6 +1123,8 @@
 				84163D031D2BF876003BA2A6 /* MJRefreshStateHeader.m in Sources */,
 				84163D181D2BF876003BA2A6 /* UIView+WebCacheOperation.m in Sources */,
 				84163D081D2BF876003BA2A6 /* UIView+MJExtension.m in Sources */,
+				C24B3EEE1D38CE3A009F991D /* AdressViewController.m in Sources */,
+				C24B3EE81D38B76F009F991D /* NameChangeViewController.m in Sources */,
 				84163C171D2BF84B003BA2A6 /* AppDelegate.m in Sources */,
 				84163CEC1D2BF876003BA2A6 /* AFNetworkReachabilityManager.m in Sources */,
 				84163D071D2BF876003BA2A6 /* UIScrollView+MJRefresh.m in Sources */,
@@ -1164,11 +1145,13 @@
 				84163D0F1D2BF876003BA2A6 /* SDWebImageDownloaderOperation.m in Sources */,
 				84163CED1D2BF876003BA2A6 /* AFSecurityPolicy.m in Sources */,
 				84163D0E1D2BF876003BA2A6 /* SDWebImageDownloader.m in Sources */,
+				C24B3EF11D38E1B0009F991D /* WCProfileAdressInfoModel.m in Sources */,
 				C28B67421D360DC9001C9A22 /* MASViewAttribute.m in Sources */,
 				84163D0A1D2BF876003BA2A6 /* NSData+ImageContentType.m in Sources */,
 				84E47FAE1D3677F2006F1DFA /* WCOutputToolManager.m in Sources */,
 				84163D021D2BF876003BA2A6 /* MJRefreshNormalHeader.m in Sources */,
 				84163CFC1D2BF876003BA2A6 /* MJRefreshAutoNormalFooter.m in Sources */,
+				C24B3EF41D38E6B4009F991D /* AddAdressInfoViewController.m in Sources */,
 				C28B67151D34E3F3001C9A22 /* WCProfileWebViewController.m in Sources */,
 				84163CF71D2BF876003BA2A6 /* MJRefreshBackFooter.m in Sources */,
 				84163D0D1D2BF876003BA2A6 /* SDWebImageDecoder.m in Sources */,
@@ -1216,6 +1199,7 @@
 				84163D051D2BF876003BA2A6 /* MJRefreshConst.m in Sources */,
 				C28B67611D36399B001C9A22 /* FMDatabase.m in Sources */,
 				C28B67461D360DC9001C9A22 /* View+MASAdditions.m in Sources */,
+				C24B3EEB1D38BAB3009F991D /* WCProfilePersonInfo.m in Sources */,
 				C24B3EE01D3874A4009F991D /* WCProfileCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

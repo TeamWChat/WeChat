@@ -16,7 +16,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [CommonUtils navRightBarButtonItemWithView:[UIImage imageNamed:@"更多信息"] text:nil font:0 viewWith:30 viewHeight:20 target:self action:@selector(clickRightItem)];
+    self.view.backgroundColor = [UIColor blackColor];
+    [CommonUtils navRightBarButtonItemWithView:[UIImage imageNamed:@"更多信息"] text:nil font:0 viewWith:25 viewHeight:20 target:self action:@selector(clickRightItem)];
+
     [self displayAvatar];
 }
 -(void)clickRightItem
@@ -51,7 +53,7 @@
     UIImageView *imageView = [[UIImageView alloc] init];
     self.imageView = imageView;
     [self.view addSubview:self.imageView];
-    self.imageView.frame = CGRectMake(0, 64 , WIDTH, HEIGHT - 64 - 49);
+    self.imageView.frame = CGRectMake(0, 64 , WIDTH, HEIGHT - 64);
     self.imageView.image = [CommonUtils getImageFromFileWithImageName:@"/avatar.png"] ;
 }
 
@@ -115,5 +117,5 @@
     // Pass the selected object to the new view controller.
 }
 */
-
+#pragma mark 
 @end

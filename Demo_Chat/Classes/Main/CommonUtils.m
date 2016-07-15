@@ -11,16 +11,16 @@
 @implementation CommonUtils
 
 //动态获取字符长度
-+(CGSize)getLabelSize:(NSString *)str fontSize:(CGFloat)font
++(CGSize)getLabelSize:(NSString *)str fontSize:(CGFloat)font width:(CGFloat)width height:(CGFloat)height
 {
-  return  [str boundingRectWithSize:CGSizeMake(280, CGFLOAT_MAX) options:NSStringDrawingUsesFontLeading|NSStringDrawingTruncatesLastVisibleLine|NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:font]} context:nil].size;
+  return  [str boundingRectWithSize:CGSizeMake(width, height) options:NSStringDrawingUsesFontLeading|NSStringDrawingTruncatesLastVisibleLine|NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:font]} context:nil].size;
     
 }
 //根据不同的需求创建rightitem
 //系统item
 +(void)navRightBarButtonItemWithimage:(UIImage *)image target:(UIViewController *)target action:(SEL)action
 {
-    UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithImage:image style:UIBarButtonItemStyleDone target:target action:action];
+    UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithImage:[image imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] style:UIBarButtonItemStyleDone target:target action:action];
     target.navigationItem.rightBarButtonItem = item;
 }
 
@@ -32,7 +32,7 @@
     [imageBtn addTarget:target action:action forControlEvents:UIControlEventTouchUpInside];
     [imageBtn setTitle:text forState:UIControlStateNormal];
     imageBtn.titleLabel.font = [UIFont systemFontOfSize:font];
-
+//    imageBtn.backgroundColor = [UIColor whiteColor];
     UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithCustomView:imageBtn];
 
     target.navigationItem.rightBarButtonItem = item;
