@@ -129,7 +129,11 @@
             break;
     }
     
-    
+}
+
+-(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
+{
+    return 20;
 }
 
 //不知明原因点两下cell才能跳转,先如此写,待有缘人改过

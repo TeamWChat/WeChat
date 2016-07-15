@@ -68,11 +68,13 @@
 		843C2CF31D336A63009EFA3C /* WCMessageListTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = 843C2CF21D336A63009EFA3C /* WCMessageListTableController.m */; };
 		843C2CF61D336A77009EFA3C /* WCChatTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = 843C2CF51D336A77009EFA3C /* WCChatTableController.m */; };
 		843C2CF91D336A8A009EFA3C /* WCProfileTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = 843C2CF81D336A8A009EFA3C /* WCProfileTableController.m */; };
+		C24B3EDF1D3874A4009F991D /* BaseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C24B3ED61D3874A4009F991D /* BaseTableViewCell.m */; };
+		C24B3EE01D3874A4009F991D /* WCProfileCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C24B3ED81D3874A4009F991D /* WCProfileCell.m */; };
+		C24B3EE11D3874A4009F991D /* WCProfileCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C24B3ED91D3874A4009F991D /* WCProfileCell.xib */; };
+		C24B3EE21D3874A4009F991D /* WCProfileHeadCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C24B3EDB1D3874A4009F991D /* WCProfileHeadCell.m */; };
+		C24B3EE31D3874A4009F991D /* WCProfileHeadCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C24B3EDC1D3874A4009F991D /* WCProfileHeadCell.xib */; };
+		C24B3EE41D3874A4009F991D /* WCProfileWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = C24B3EDE1D3874A4009F991D /* WCProfileWebView.m */; };
 		C28B66F51D348876001C9A22 /* libHyphenateFullSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C28B66F41D348876001C9A22 /* libHyphenateFullSDK.a */; };
-		C28B66F91D348C6A001C9A22 /* WCProfileCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C28B66F71D348C6A001C9A22 /* WCProfileCell.m */; };
-		C28B66FA1D348C6A001C9A22 /* WCProfileCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C28B66F81D348C6A001C9A22 /* WCProfileCell.xib */; };
-		C28B66FE1D3498D7001C9A22 /* WCProfileHeadCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C28B66FC1D3498D7001C9A22 /* WCProfileHeadCell.m */; };
-		C28B66FF1D3498D7001C9A22 /* WCProfileHeadCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C28B66FD1D3498D7001C9A22 /* WCProfileHeadCell.xib */; };
 		C28B670A1D34CF5C001C9A22 /* 卡包.png in Resources */ = {isa = PBXBuildFile; fileRef = C28B67041D34CF5C001C9A22 /* 卡包.png */; };
 		C28B670B1D34CF5C001C9A22 /* 收藏.png in Resources */ = {isa = PBXBuildFile; fileRef = C28B67051D34CF5C001C9A22 /* 收藏.png */; };
 		C28B670C1D34CF5C001C9A22 /* 相册.png in Resources */ = {isa = PBXBuildFile; fileRef = C28B67061D34CF5C001C9A22 /* 相册.png */; };
@@ -80,9 +82,7 @@
 		C28B670E1D34CF5C001C9A22 /* 设置.png in Resources */ = {isa = PBXBuildFile; fileRef = C28B67081D34CF5C001C9A22 /* 设置.png */; };
 		C28B670F1D34CF5C001C9A22 /* 钱包.png in Resources */ = {isa = PBXBuildFile; fileRef = C28B67091D34CF5C001C9A22 /* 钱包.png */; };
 		C28B67151D34E3F3001C9A22 /* WCProfileWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C28B67141D34E3F3001C9A22 /* WCProfileWebViewController.m */; };
-		C28B671B1D35D27A001C9A22 /* WCProfileWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = C28B671A1D35D27A001C9A22 /* WCProfileWebView.m */; };
 		C28B671E1D35D9B0001C9A22 /* WCProfileMineInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C28B671D1D35D9B0001C9A22 /* WCProfileMineInfoViewController.m */; };
-		C28B67211D35E5A5001C9A22 /* BaseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C28B67201D35E5A5001C9A22 /* BaseTableViewCell.m */; };
 		C28B673D1D360DC9001C9A22 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C28B67231D360DC9001C9A22 /* Info.plist */; };
 		C28B673E1D360DC9001C9A22 /* MASCompositeConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = C28B67251D360DC9001C9A22 /* MASCompositeConstraint.m */; };
 		C28B673F1D360DC9001C9A22 /* MASConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = C28B67281D360DC9001C9A22 /* MASConstraint.m */; };
@@ -280,13 +280,17 @@
 		843C2CF51D336A77009EFA3C /* WCChatTableController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCChatTableController.m; sourceTree = "<group>"; };
 		843C2CF71D336A8A009EFA3C /* WCProfileTableController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCProfileTableController.h; sourceTree = "<group>"; };
 		843C2CF81D336A8A009EFA3C /* WCProfileTableController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCProfileTableController.m; sourceTree = "<group>"; };
+		C24B3ED51D3874A4009F991D /* BaseTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTableViewCell.h; sourceTree = "<group>"; };
+		C24B3ED61D3874A4009F991D /* BaseTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTableViewCell.m; sourceTree = "<group>"; };
+		C24B3ED71D3874A4009F991D /* WCProfileCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCProfileCell.h; sourceTree = "<group>"; };
+		C24B3ED81D3874A4009F991D /* WCProfileCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCProfileCell.m; sourceTree = "<group>"; };
+		C24B3ED91D3874A4009F991D /* WCProfileCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WCProfileCell.xib; sourceTree = "<group>"; };
+		C24B3EDA1D3874A4009F991D /* WCProfileHeadCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCProfileHeadCell.h; sourceTree = "<group>"; };
+		C24B3EDB1D3874A4009F991D /* WCProfileHeadCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCProfileHeadCell.m; sourceTree = "<group>"; };
+		C24B3EDC1D3874A4009F991D /* WCProfileHeadCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WCProfileHeadCell.xib; sourceTree = "<group>"; };
+		C24B3EDD1D3874A4009F991D /* WCProfileWebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCProfileWebView.h; sourceTree = "<group>"; };
+		C24B3EDE1D3874A4009F991D /* WCProfileWebView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCProfileWebView.m; sourceTree = "<group>"; };
 		C28B66F41D348876001C9A22 /* libHyphenateFullSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libHyphenateFullSDK.a; sourceTree = "<group>"; };
-		C28B66F61D348C6A001C9A22 /* WCProfileCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WCProfileCell.h; path = Demo_Chat/Classes/Profile/WCProfileCell.h; sourceTree = SOURCE_ROOT; };
-		C28B66F71D348C6A001C9A22 /* WCProfileCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WCProfileCell.m; path = Demo_Chat/Classes/Profile/WCProfileCell.m; sourceTree = SOURCE_ROOT; };
-		C28B66F81D348C6A001C9A22 /* WCProfileCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = WCProfileCell.xib; path = Demo_Chat/Classes/Profile/WCProfileCell.xib; sourceTree = SOURCE_ROOT; };
-		C28B66FB1D3498D7001C9A22 /* WCProfileHeadCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WCProfileHeadCell.h; path = Demo_Chat/Classes/Profile/WCProfileHeadCell.h; sourceTree = SOURCE_ROOT; };
-		C28B66FC1D3498D7001C9A22 /* WCProfileHeadCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WCProfileHeadCell.m; path = Demo_Chat/Classes/Profile/WCProfileHeadCell.m; sourceTree = SOURCE_ROOT; };
-		C28B66FD1D3498D7001C9A22 /* WCProfileHeadCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = WCProfileHeadCell.xib; path = Demo_Chat/Classes/Profile/WCProfileHeadCell.xib; sourceTree = SOURCE_ROOT; };
 		C28B67011D34A13A001C9A22 /* WeChat.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WeChat.pch; path = ../WeChat.pch; sourceTree = "<group>"; };
 		C28B67041D34CF5C001C9A22 /* 卡包.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "卡包.png"; sourceTree = "<group>"; };
 		C28B67051D34CF5C001C9A22 /* 收藏.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "收藏.png"; sourceTree = "<group>"; };
@@ -296,12 +300,8 @@
 		C28B67091D34CF5C001C9A22 /* 钱包.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "钱包.png"; sourceTree = "<group>"; };
 		C28B67131D34E3F3001C9A22 /* WCProfileWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCProfileWebViewController.h; sourceTree = "<group>"; };
 		C28B67141D34E3F3001C9A22 /* WCProfileWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCProfileWebViewController.m; sourceTree = "<group>"; };
-		C28B67191D35D27A001C9A22 /* WCProfileWebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WCProfileWebView.h; path = Demo_Chat/Classes/Profile/WCProfileWebView.h; sourceTree = SOURCE_ROOT; };
-		C28B671A1D35D27A001C9A22 /* WCProfileWebView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WCProfileWebView.m; path = Demo_Chat/Classes/Profile/WCProfileWebView.m; sourceTree = SOURCE_ROOT; };
 		C28B671C1D35D9B0001C9A22 /* WCProfileMineInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCProfileMineInfoViewController.h; sourceTree = "<group>"; };
 		C28B671D1D35D9B0001C9A22 /* WCProfileMineInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCProfileMineInfoViewController.m; sourceTree = "<group>"; };
-		C28B671F1D35E5A5001C9A22 /* BaseTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BaseTableViewCell.h; path = Demo_Chat/Classes/Profile/BaseTableViewCell.h; sourceTree = SOURCE_ROOT; };
-		C28B67201D35E5A5001C9A22 /* BaseTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BaseTableViewCell.m; path = Demo_Chat/Classes/Profile/BaseTableViewCell.m; sourceTree = SOURCE_ROOT; };
 		C28B67231D360DC9001C9A22 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C28B67241D360DC9001C9A22 /* MASCompositeConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASCompositeConstraint.h; sourceTree = "<group>"; };
 		C28B67251D360DC9001C9A22 /* MASCompositeConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASCompositeConstraint.m; sourceTree = "<group>"; };
@@ -835,10 +835,10 @@
 		84163CE51D2BF876003BA2A6 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				C24B3EE51D3874C9009F991D /* Models */,
+				C24B3ED41D3874A4009F991D /* view */,
 				84163CE61D2BF876003BA2A6 /* Controllers */,
-				84163CE71D2BF876003BA2A6 /* Models */,
 				84163CE81D2BF876003BA2A6 /* Profile.storyboard */,
-				84163CE91D2BF876003BA2A6 /* Views */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -858,28 +858,28 @@
 			path = Controllers;
 			sourceTree = "<group>";
 		};
-		84163CE71D2BF876003BA2A6 /* Models */ = {
+		C24B3ED41D3874A4009F991D /* view */ = {
+			isa = PBXGroup;
+			children = (
+				C24B3ED51D3874A4009F991D /* BaseTableViewCell.h */,
+				C24B3ED61D3874A4009F991D /* BaseTableViewCell.m */,
+				C24B3ED71D3874A4009F991D /* WCProfileCell.h */,
+				C24B3ED81D3874A4009F991D /* WCProfileCell.m */,
+				C24B3ED91D3874A4009F991D /* WCProfileCell.xib */,
+				C24B3EDA1D3874A4009F991D /* WCProfileHeadCell.h */,
+				C24B3EDB1D3874A4009F991D /* WCProfileHeadCell.m */,
+				C24B3EDC1D3874A4009F991D /* WCProfileHeadCell.xib */,
+				C24B3EDD1D3874A4009F991D /* WCProfileWebView.h */,
+				C24B3EDE1D3874A4009F991D /* WCProfileWebView.m */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		C24B3EE51D3874C9009F991D /* Models */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			path = Models;
-			sourceTree = "<group>";
-		};
-		84163CE91D2BF876003BA2A6 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				C28B67191D35D27A001C9A22 /* WCProfileWebView.h */,
-				C28B671A1D35D27A001C9A22 /* WCProfileWebView.m */,
-				C28B66F61D348C6A001C9A22 /* WCProfileCell.h */,
-				C28B66F71D348C6A001C9A22 /* WCProfileCell.m */,
-				C28B66F81D348C6A001C9A22 /* WCProfileCell.xib */,
-				C28B66FB1D3498D7001C9A22 /* WCProfileHeadCell.h */,
-				C28B66FC1D3498D7001C9A22 /* WCProfileHeadCell.m */,
-				C28B66FD1D3498D7001C9A22 /* WCProfileHeadCell.xib */,
-				C28B671F1D35E5A5001C9A22 /* BaseTableViewCell.h */,
-				C28B67201D35E5A5001C9A22 /* BaseTableViewCell.m */,
-			);
-			path = Views;
 			sourceTree = "<group>";
 		};
 		C28B67021D34CF5C001C9A22 /* resource */ = {
@@ -1062,16 +1062,16 @@
 				84163D1C1D2BF8B4003BA2A6 /* Main.storyboard in Resources */,
 				C28B670B1D34CF5C001C9A22 /* 收藏.png in Resources */,
 				84163C221D2BF84B003BA2A6 /* LaunchScreen.storyboard in Resources */,
-				C28B66FF1D3498D7001C9A22 /* WCProfileHeadCell.xib in Resources */,
 				C28B670E1D34CF5C001C9A22 /* 设置.png in Resources */,
 				84163CEA1D2BF876003BA2A6 /* Contact.storyboard in Resources */,
 				C28B670C1D34CF5C001C9A22 /* 相册.png in Resources */,
 				84163C1F1D2BF84B003BA2A6 /* Assets.xcassets in Resources */,
+				C24B3EE31D3874A4009F991D /* WCProfileHeadCell.xib in Resources */,
 				C28B670A1D34CF5C001C9A22 /* 卡包.png in Resources */,
 				C28B670F1D34CF5C001C9A22 /* 钱包.png in Resources */,
 				84163D041D2BF876003BA2A6 /* MJRefresh.bundle in Resources */,
-				C28B66FA1D348C6A001C9A22 /* WCProfileCell.xib in Resources */,
 				C28B676C1D37753B001C9A22 /* 更多信息.png in Resources */,
+				C24B3EE11D3874A4009F991D /* WCProfileCell.xib in Resources */,
 				84163D191D2BF876003BA2A6 /* Message.storyboard in Resources */,
 				84163D1A1D2BF876003BA2A6 /* Profile.storyboard in Resources */,
 			);
@@ -1106,11 +1106,10 @@
 				84163C171D2BF84B003BA2A6 /* AppDelegate.m in Sources */,
 				84163CEC1D2BF876003BA2A6 /* AFNetworkReachabilityManager.m in Sources */,
 				84163D071D2BF876003BA2A6 /* UIScrollView+MJRefresh.m in Sources */,
-				C28B66F91D348C6A001C9A22 /* WCProfileCell.m in Sources */,
-				C28B66FE1D3498D7001C9A22 /* WCProfileHeadCell.m in Sources */,
 				84163D0B1D2BF876003BA2A6 /* SDImageCache.m in Sources */,
 				C28B674D1D361281001C9A22 /* CommonUtils.m in Sources */,
 				C28B67721D378187001C9A22 /* WeChatAlert.m in Sources */,
+				C24B3EE41D3874A4009F991D /* WCProfileWebView.m in Sources */,
 				84163C141D2BF84B003BA2A6 /* main.m in Sources */,
 				84163D0C1D2BF876003BA2A6 /* SDWebImageCompat.m in Sources */,
 				84163CFF1D2BF876003BA2A6 /* MJRefreshBackNormalFooter.m in Sources */,
@@ -1119,6 +1118,7 @@
 				843C2CF31D336A63009EFA3C /* WCMessageListTableController.m in Sources */,
 				84163D161D2BF876003BA2A6 /* UIImageView+HighlightedWebCache.m in Sources */,
 				84163D111D2BF876003BA2A6 /* SDWebImagePrefetcher.m in Sources */,
+				C24B3EE21D3874A4009F991D /* WCProfileHeadCell.m in Sources */,
 				C28B67441D360DC9001C9A22 /* NSArray+MASAdditions.m in Sources */,
 				84163D0F1D2BF876003BA2A6 /* SDWebImageDownloaderOperation.m in Sources */,
 				84163CED1D2BF876003BA2A6 /* AFSecurityPolicy.m in Sources */,
@@ -1138,12 +1138,11 @@
 				84163CFB1D2BF876003BA2A6 /* MJRefreshAutoGifFooter.m in Sources */,
 				843C2CF91D336A8A009EFA3C /* WCProfileTableController.m in Sources */,
 				84163D061D2BF876003BA2A6 /* UIScrollView+MJExtension.m in Sources */,
-				C28B671B1D35D27A001C9A22 /* WCProfileWebView.m in Sources */,
 				C28B67531D362BAA001C9A22 /* AvatarSetViewController.m in Sources */,
 				C28B67651D36399B001C9A22 /* FMResultSet.m in Sources */,
+				C24B3EDF1D3874A4009F991D /* BaseTableViewCell.m in Sources */,
 				84163CEE1D2BF876003BA2A6 /* AFURLRequestSerialization.m in Sources */,
 				C28B671E1D35D9B0001C9A22 /* WCProfileMineInfoViewController.m in Sources */,
-				C28B67211D35E5A5001C9A22 /* BaseTableViewCell.m in Sources */,
 				84163CFE1D2BF876003BA2A6 /* MJRefreshBackGifFooter.m in Sources */,
 				C28B67641D36399B001C9A22 /* FMDatabaseQueue.m in Sources */,
 				84163D091D2BF876003BA2A6 /* MKAnnotationView+WebCache.m in Sources */,
@@ -1171,6 +1170,7 @@
 				84163D051D2BF876003BA2A6 /* MJRefreshConst.m in Sources */,
 				C28B67611D36399B001C9A22 /* FMDatabase.m in Sources */,
 				C28B67461D360DC9001C9A22 /* View+MASAdditions.m in Sources */,
+				C24B3EE01D3874A4009F991D /* WCProfileCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

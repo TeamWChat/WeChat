@@ -23,7 +23,6 @@
 
 
 
-
 -(NSArray *)profileArray
 {
     if (!_profileArray) {
@@ -68,7 +67,6 @@
     }
     else
     {
-
         [cell contentLabelAddConstraint:@"qwrrttfddsagfdhkjhihjkjjjkl" fontSize:16];
          return cell;
     }

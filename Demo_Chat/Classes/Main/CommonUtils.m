@@ -84,8 +84,9 @@
     }
 }
 
-//将图片写入
 
+
+//将图片写入数据库
 +(NSData *)getImageFromDB
 {
     NSString *path = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
@@ -101,6 +102,40 @@
         [db close];
     }
     return imageData;
+}
+
+
+/**将图片写入文件*/
++(void)writeImageToFile:(UIImage *)image imageName:(NSString *)imageName;
+{
+    NSData *data;
+    if (UIImagePNGRepresentation(image) ==nil)
+    {
+        data = UIImageJPEGRepresentation(image,1.0);
+    }
+    else
+    {
+        data = UIImagePNGRepresentation(image);
+    }
+
+    NSString *path = [NSHomeDirectory() stringByAppendingPathComponent:@"Documents"];
+    NSString *fileName = [path stringByAppendingString:imageName];
+    
+    NSFileManager *manager = [NSFileManager defaultManager];
+    
+    [manager createDirectoryAtPath:path withIntermediateDirectories:YES attributes:nil error:nil];
+    [manager createFileAtPath:fileName contents:data attributes:nil];
+}
+
+/**从文件获得图片*/
++(UIImage *)getImageFromFileWithImageName:(NSString *)imageName
+{
+    NSString *path = [NSHomeDirectory() stringByAppendingPathComponent:@"Documents"];
+    NSString *fileName = [path stringByAppendingString:imageName];
+    NSFileManager *manager = [NSFileManager defaultManager];
+    NSData *data = [manager contentsAtPath:fileName];
+    UIImage *image = [UIImage imageWithData:data];
+    return image;
 }
 
 @end
