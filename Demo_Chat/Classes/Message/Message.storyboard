@@ -28,17 +28,43 @@
                             <outlet property="delegate" destination="6SR-o2-JUc" id="0By-lg-1ZG"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="消息" id="PLu-Oe-f0r"/>
+                    <navigationItem key="navigationItem" title="消息" id="PLu-Oe-f0r">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="jHV-Np-obg">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <segue destination="BBY-3R-qLY" kind="push" identifier="PushToChatRoom" id="Wxc-mY-J1H"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1jr-jL-RUC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="680" y="-572"/>
+            <point key="canvasLocation" x="604" y="-572"/>
+        </scene>
+        <!--Chat Table Controller-->
+        <scene sceneID="yRZ-2q-mI6">
+            <objects>
+                <viewController hidesBottomBarWhenPushed="YES" id="BBY-3R-qLY" customClass="WCChatTableController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="kQt-e1-6cg"/>
+                        <viewControllerLayoutGuide type="bottom" id="Uxf-JO-KOO"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="7QS-A0-VOz">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="pkW-uW-hm8"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PmX-9y-Xwg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1296" y="-572"/>
         </scene>
         <!--消息-->
         <scene sceneID="E1Y-QO-4ir">
             <objects>
-                <navigationController id="2EX-cF-8hL" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="消息" id="Fnq-kU-Y2D"/>
+                <navigationController id="2EX-cF-8hL" customClass="WCNavigationController" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="消息" image="tabbar_mainframe" selectedImage="tabbar_mainframeHL" id="Fnq-kU-Y2D"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="iYI-b7-bqS">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -53,4 +79,8 @@
             <point key="canvasLocation" x="-140" y="-572"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="tabbar_mainframe" width="25" height="23"/>
+        <image name="tabbar_mainframeHL" width="25" height="23"/>
+    </resources>
 </document>

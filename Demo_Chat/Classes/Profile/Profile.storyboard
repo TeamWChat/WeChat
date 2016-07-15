@@ -28,8 +28,8 @@
         <!--我-->
         <scene sceneID="blb-GS-qND">
             <objects>
-                <navigationController id="mnq-1X-gjc" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="我" id="LUw-Ih-ZrH"/>
+                <navigationController id="mnq-1X-gjc" customClass="WCNavigationController" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="我" image="tabbar_me" selectedImage="tabbar_meHL" id="LUw-Ih-ZrH"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="5ZP-ae-Udz">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -44,4 +44,8 @@
             <point key="canvasLocation" x="-413" y="446"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="tabbar_me" width="23" height="23"/>
+        <image name="tabbar_meHL" width="23" height="23"/>
+    </resources>
 </document>
