@@ -14,12 +14,15 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2K9-Uf-h78" userLabel="ToolBar">
                     <rect key="frame" x="0.0" y="0.0" width="600" height="49"/>
                     <subviews>
-                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8qU-fu-g4c">
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8qU-fu-g4c" userLabel="TextField">
                             <rect key="frame" x="45" y="9" width="470" height="30"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                            <textInputTraits key="textInputTraits"/>
+                            <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
+                            <connections>
+                                <outlet property="delegate" destination="iN0-l3-epB" id="oTE-dO-CQi"/>
+                            </connections>
                         </textField>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kjg-l4-6FJ" userLabel="ShowButton">
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kjg-l4-6FJ" userLabel="TypeSelectButton">
                             <rect key="frame" x="560" y="7" width="35" height="35"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="35" id="QfK-Wp-5GX"/>
@@ -27,8 +30,11 @@
                             </constraints>
                             <state key="normal" backgroundImage="TypeSelectorBtn_Black"/>
                             <state key="highlighted" backgroundImage="TypeSelectorBtnHL_Black"/>
+                            <connections>
+                                <action selector="respondsToTypeSelectButton:" destination="iN0-l3-epB" eventType="touchUpInside" id="e8n-d8-Vfc"/>
+                            </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8dd-kh-z4Q" userLabel="EmojiButton">
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8dd-kh-z4Q" userLabel="EmotionButton">
                             <rect key="frame" x="520" y="7" width="35" height="35"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="35" id="15d-Nd-Bi1"/>
@@ -38,42 +44,60 @@
                             <state key="selected" backgroundImage="ToolViewKeyboard"/>
                             <state key="highlighted" backgroundImage="ToolViewEmotionHL"/>
                             <state key="focused" backgroundImage="ToolViewKeyboardHL"/>
+                            <connections>
+                                <action selector="respondsToEmotionButton:" destination="iN0-l3-epB" eventType="touchUpInside" id="dDu-2C-kn9"/>
+                            </connections>
                         </button>
-                        <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eDG-o7-6C5" userLabel="KeyboardButton">
-                            <rect key="frame" x="520" y="7" width="35" height="35"/>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UJy-jl-pFI" userLabel="Separator Line">
+                            <rect key="frame" x="0.0" y="0.0" width="600" height="1"/>
+                            <color key="backgroundColor" red="0.75112452649999994" green="0.75112452649999994" blue="0.75112452649999994" alpha="1" colorSpace="calibratedRGB"/>
                             <constraints>
-                                <constraint firstAttribute="width" constant="35" id="8j3-OB-gw0"/>
-                                <constraint firstAttribute="height" constant="35" id="Fmm-hc-Kcy"/>
+                                <constraint firstAttribute="height" constant="1" id="VSw-ke-a4D"/>
                             </constraints>
-                            <state key="normal" backgroundImage="ToolViewKeyboard"/>
-                            <state key="highlighted" backgroundImage="ToolViewKeyboardHL"/>
-                        </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tUT-zS-ZeS" userLabel="InputVoiceButton">
+                        </view>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tUT-zS-ZeS" userLabel="VoiceButton">
                             <rect key="frame" x="5" y="7" width="35" height="35"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="35" id="6qN-Rd-9Pw"/>
                                 <constraint firstAttribute="height" constant="35" id="EHZ-m3-moB"/>
                             </constraints>
                             <state key="normal" backgroundImage="ToolViewInputVoice"/>
+                            <state key="selected" backgroundImage="ToolViewKeyboard"/>
                             <state key="highlighted" backgroundImage="ToolViewInputVoiceHL"/>
+                            <connections>
+                                <action selector="rensondsToVoiceButton:" destination="iN0-l3-epB" eventType="touchUpInside" id="Jrq-TH-m7C"/>
+                            </connections>
                         </button>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
-                        <constraint firstItem="eDG-o7-6C5" firstAttribute="centerY" secondItem="8dd-kh-z4Q" secondAttribute="centerY" id="9WT-Ga-8V1"/>
+                        <constraint firstItem="UJy-jl-pFI" firstAttribute="top" secondItem="2K9-Uf-h78" secondAttribute="top" id="2J4-rq-P6K"/>
                         <constraint firstItem="tUT-zS-ZeS" firstAttribute="centerY" secondItem="2K9-Uf-h78" secondAttribute="centerY" id="H8l-nz-Qx6"/>
-                        <constraint firstItem="eDG-o7-6C5" firstAttribute="centerX" secondItem="8dd-kh-z4Q" secondAttribute="centerX" id="P7Y-v3-XLz"/>
+                        <constraint firstItem="UJy-jl-pFI" firstAttribute="leading" secondItem="2K9-Uf-h78" secondAttribute="leading" id="I1q-yM-3Qd"/>
+                        <constraint firstItem="8dd-kh-z4Q" firstAttribute="leading" secondItem="8qU-fu-g4c" secondAttribute="trailing" constant="5" id="MWO-p7-CDO"/>
                         <constraint firstItem="tUT-zS-ZeS" firstAttribute="leading" secondItem="2K9-Uf-h78" secondAttribute="leading" constant="5" id="QTX-C5-P4m"/>
                         <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="49" id="Uem-az-CYD"/>
-                        <constraint firstItem="eDG-o7-6C5" firstAttribute="leading" secondItem="8qU-fu-g4c" secondAttribute="trailing" constant="5" id="aVY-Le-LOW"/>
+                        <constraint firstAttribute="bottom" secondItem="tUT-zS-ZeS" secondAttribute="bottom" constant="7" id="fuS-o1-A3x"/>
                         <constraint firstItem="8qU-fu-g4c" firstAttribute="centerY" secondItem="2K9-Uf-h78" secondAttribute="centerY" id="go6-04-pII"/>
                         <constraint firstItem="Kjg-l4-6FJ" firstAttribute="leading" secondItem="8dd-kh-z4Q" secondAttribute="trailing" constant="5" id="iMG-vc-5Uh"/>
                         <constraint firstAttribute="height" constant="49" id="jTF-4T-My3"/>
                         <constraint firstItem="8qU-fu-g4c" firstAttribute="leading" secondItem="tUT-zS-ZeS" secondAttribute="trailing" constant="5" id="kBj-rw-UbZ"/>
                         <constraint firstItem="Kjg-l4-6FJ" firstAttribute="centerY" secondItem="2K9-Uf-h78" secondAttribute="centerY" id="mSg-PA-17y"/>
+                        <constraint firstItem="UJy-jl-pFI" firstAttribute="leading" secondItem="tUT-zS-ZeS" secondAttribute="trailing" id="oDj-qe-eWc"/>
+                        <constraint firstItem="Kjg-l4-6FJ" firstAttribute="centerY" secondItem="tUT-zS-ZeS" secondAttribute="centerY" id="s7f-pd-rlH"/>
+                        <constraint firstAttribute="trailing" secondItem="UJy-jl-pFI" secondAttribute="trailing" id="tpp-pI-gLU"/>
+                        <constraint firstItem="8dd-kh-z4Q" firstAttribute="centerY" secondItem="tUT-zS-ZeS" secondAttribute="centerY" id="xhH-vh-gF7"/>
                         <constraint firstItem="8dd-kh-z4Q" firstAttribute="centerY" secondItem="2K9-Uf-h78" secondAttribute="centerY" id="y5I-1B-mat"/>
                         <constraint firstAttribute="trailing" secondItem="Kjg-l4-6FJ" secondAttribute="trailing" constant="5" id="zdJ-BY-e6B"/>
                     </constraints>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="oDj-qe-eWc"/>
+                            <exclude reference="H8l-nz-Qx6"/>
+                            <exclude reference="y5I-1B-mat"/>
+                            <exclude reference="mSg-PA-17y"/>
+                        </mask>
+                    </variation>
                 </view>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -84,6 +108,12 @@
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="emotionButton" destination="8dd-kh-z4Q" id="0TX-Ov-xZw"/>
+                <outlet property="textField" destination="8qU-fu-g4c" id="6FK-0S-ajg"/>
+                <outlet property="typeSelectButton" destination="Kjg-l4-6FJ" id="AbK-LR-TA6"/>
+                <outlet property="voiceButton" destination="tUT-zS-ZeS" id="Vue-NY-ERG"/>
+            </connections>
             <point key="canvasLocation" x="441" y="103.5"/>
         </view>
     </objects>

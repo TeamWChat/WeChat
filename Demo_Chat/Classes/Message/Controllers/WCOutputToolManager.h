@@ -7,13 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "WCInputView.h"
 
 @interface WCOutputToolManager : UIViewController
 
-@property (nonatomic, assign) BOOL canHideKeyboard;
-
 + (instancetype)showInSupperController:(UIViewController *)superViewController;
 
-- (void)endTyping;
+/**工具条收拢*/
+- (void)popDown;
 
 @end
+

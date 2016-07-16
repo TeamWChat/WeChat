@@ -33,6 +33,21 @@
     [self setupUI];
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(didSendMessage:)
+                                                 name:kWCInputViewDidSendMessageNotification
+                                               object:nil];
+}
+
+- (void)viewDidDisappear:(BOOL)animated {
+    [super viewDidDisappear:animated];
+    [[NSNotificationCenter defaultCenter] removeObserver:self
+                                                    name:kWCInputViewDidSendMessageNotification
+                                                  object:nil];
+}
+
 #pragma mark - Setup UI
 
 - (void)setupUI {
@@ -45,13 +60,17 @@
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-//    WCChatRoomDetailViewController *roomDetailVC = [[WCChatRoomDetailViewController alloc] init];
-//    roomDetailVC.view.backgroundColor = [UIColor whiteColor];
-//    [self.navigationController pushViewController:roomDetailVC animated:YES];
-    [self.toolManager endTyping];
+    [self.toolManager popDown];
 }
 
-#pragma mark - Table view data source
+#pragma mark - Notification Selector
+
+- (void)didSendMessage:(NSNotification *)notification {
+    NSString *message = notification.userInfo[kWCInputViewMessageKey];
+    NSLog(@"%@", message);
+}
+
+#pragma mark - UITableViewDataSource
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return 0;

@@ -10,7 +10,7 @@
 
 static NSString *const kWCChatRoomsCellIdentifier = @"kWCChatRoomsCellIdentifier";
 
-@interface WCMessageListTableController ()
+@interface WCMessageListTableController ()<NSXMLParserDelegate>
 
 @property (nonatomic, strong) NSArray *chatRooms;
 
@@ -33,9 +33,11 @@ static NSString *const kWCChatRoomsCellIdentifier = @"kWCChatRoomsCellIdentifier
     [super viewDidLoad];
     
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:kWCChatRoomsCellIdentifier];
-    
 }
 
+- (void)loadData {
+    
+}
 
 #pragma mark - Table view data source
 
