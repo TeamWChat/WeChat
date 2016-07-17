@@ -173,6 +173,10 @@
 		8459A2011D37C1D6003A2140 /* Expression_104@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8459A1981D37C1D6003A2140 /* Expression_104@2x.png */; };
 		8459A2021D37C1D6003A2140 /* Expression_105@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8459A1991D37C1D6003A2140 /* Expression_105@2x.png */; };
 		8459A2041D380787003A2140 /* CodeResources in Resources */ = {isa = PBXBuildFile; fileRef = 8459A2031D380787003A2140 /* CodeResources */; };
+		84A702631D3BBD66007897DB /* NSString+Emojize.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A702621D3BBD66007897DB /* NSString+Emojize.m */; };
+		84A702661D3BBF42007897DB /* WCEmotion.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A702651D3BBF42007897DB /* WCEmotion.m */; };
+		84A702691D3BC178007897DB /* WCEmotionItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A702681D3BC178007897DB /* WCEmotionItemCell.m */; };
+		84A7026C1D3BC509007897DB /* WCPopUpEmotionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A7026B1D3BC509007897DB /* WCPopUpEmotionView.m */; };
 		84A8B5C31D3A1D7600BFEBF2 /* WCEmotionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A8B5C21D3A1D7600BFEBF2 /* WCEmotionView.m */; };
 		84A8B5C91D3A273000BFEBF2 /* WCTypeSelectView.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A8B5C81D3A273000BFEBF2 /* WCTypeSelectView.m */; };
 		84E47FAE1D3677F2006F1DFA /* WCOutputToolManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E47FAD1D3677F2006F1DFA /* WCOutputToolManager.m */; };
@@ -462,6 +466,15 @@
 		8459A1981D37C1D6003A2140 /* Expression_104@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Expression_104@2x.png"; sourceTree = "<group>"; };
 		8459A1991D37C1D6003A2140 /* Expression_105@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Expression_105@2x.png"; sourceTree = "<group>"; };
 		8459A2031D380787003A2140 /* CodeResources */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = CodeResources; sourceTree = "<group>"; };
+		84A702601D3BBD66007897DB /* emojis.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = emojis.h; sourceTree = "<group>"; };
+		84A702611D3BBD66007897DB /* NSString+Emojize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Emojize.h"; sourceTree = "<group>"; };
+		84A702621D3BBD66007897DB /* NSString+Emojize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Emojize.m"; sourceTree = "<group>"; };
+		84A702641D3BBF42007897DB /* WCEmotion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCEmotion.h; sourceTree = "<group>"; };
+		84A702651D3BBF42007897DB /* WCEmotion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCEmotion.m; sourceTree = "<group>"; };
+		84A702671D3BC178007897DB /* WCEmotionItemCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCEmotionItemCell.h; sourceTree = "<group>"; };
+		84A702681D3BC178007897DB /* WCEmotionItemCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCEmotionItemCell.m; sourceTree = "<group>"; };
+		84A7026A1D3BC509007897DB /* WCPopUpEmotionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCPopUpEmotionView.h; sourceTree = "<group>"; };
+		84A7026B1D3BC509007897DB /* WCPopUpEmotionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCPopUpEmotionView.m; sourceTree = "<group>"; };
 		84A8B5C11D3A1D7600BFEBF2 /* WCEmotionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCEmotionView.h; sourceTree = "<group>"; };
 		84A8B5C21D3A1D7600BFEBF2 /* WCEmotionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCEmotionView.m; sourceTree = "<group>"; };
 		84A8B5C71D3A273000BFEBF2 /* WCTypeSelectView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCTypeSelectView.h; sourceTree = "<group>"; };
@@ -948,6 +961,8 @@
 		84163CE31D2BF876003BA2A6 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				84A702641D3BBF42007897DB /* WCEmotion.h */,
+				84A702651D3BBF42007897DB /* WCEmotion.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -962,6 +977,10 @@
 				84A8B5C21D3A1D7600BFEBF2 /* WCEmotionView.m */,
 				84A8B5C71D3A273000BFEBF2 /* WCTypeSelectView.h */,
 				84A8B5C81D3A273000BFEBF2 /* WCTypeSelectView.m */,
+				84A702671D3BC178007897DB /* WCEmotionItemCell.h */,
+				84A702681D3BC178007897DB /* WCEmotionItemCell.m */,
+				84A7026A1D3BC509007897DB /* WCPopUpEmotionView.h */,
+				84A7026B1D3BC509007897DB /* WCPopUpEmotionView.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1112,9 +1131,20 @@
 			path = Expression;
 			sourceTree = "<group>";
 		};
+		84A7025F1D3BBD58007897DB /* Emoji */ = {
+			isa = PBXGroup;
+			children = (
+				84A702601D3BBD66007897DB /* emojis.h */,
+				84A702611D3BBD66007897DB /* NSString+Emojize.h */,
+				84A702621D3BBD66007897DB /* NSString+Emojize.m */,
+			);
+			name = Emoji;
+			sourceTree = "<group>";
+		};
 		84E47FAF1D367AB9006F1DFA /* Categories */ = {
 			isa = PBXGroup;
 			children = (
+				84A7025F1D3BBD58007897DB /* Emoji */,
 				84E47FB01D367AD5006F1DFA /* UIView+AutoLayout.h */,
 				84E47FB11D367AD5006F1DFA /* UIView+AutoLayout.m */,
 			);
@@ -1366,6 +1396,7 @@
 				84163D131D2BF876003BA2A6 /* UIImage+GIF.m in Sources */,
 				84163CF01D2BF876003BA2A6 /* AFURLSessionManager.m in Sources */,
 				84163D031D2BF876003BA2A6 /* MJRefreshStateHeader.m in Sources */,
+				84A702631D3BBD66007897DB /* NSString+Emojize.m in Sources */,
 				84163D181D2BF876003BA2A6 /* UIView+WebCacheOperation.m in Sources */,
 				84163D081D2BF876003BA2A6 /* UIView+MJExtension.m in Sources */,
 				84163C171D2BF84B003BA2A6 /* AppDelegate.m in Sources */,
@@ -1384,6 +1415,7 @@
 				84163D0A1D2BF876003BA2A6 /* NSData+ImageContentType.m in Sources */,
 				84A8B5C91D3A273000BFEBF2 /* WCTypeSelectView.m in Sources */,
 				84E47FAE1D3677F2006F1DFA /* WCOutputToolManager.m in Sources */,
+				84A702691D3BC178007897DB /* WCEmotionItemCell.m in Sources */,
 				84163D021D2BF876003BA2A6 /* MJRefreshNormalHeader.m in Sources */,
 				84163CFC1D2BF876003BA2A6 /* MJRefreshAutoNormalFooter.m in Sources */,
 				84163CF71D2BF876003BA2A6 /* MJRefreshBackFooter.m in Sources */,
@@ -1391,6 +1423,7 @@
 				84163CFD1D2BF876003BA2A6 /* MJRefreshAutoStateFooter.m in Sources */,
 				84163D011D2BF876003BA2A6 /* MJRefreshGifHeader.m in Sources */,
 				84163D171D2BF876003BA2A6 /* UIImageView+WebCache.m in Sources */,
+				84A702661D3BBF42007897DB /* WCEmotion.m in Sources */,
 				84163D101D2BF876003BA2A6 /* SDWebImageManager.m in Sources */,
 				84163CFB1D2BF876003BA2A6 /* MJRefreshAutoGifFooter.m in Sources */,
 				843C2CF91D336A8A009EFA3C /* WCProfileTableController.m in Sources */,
@@ -1398,6 +1431,7 @@
 				84163CEE1D2BF876003BA2A6 /* AFURLRequestSerialization.m in Sources */,
 				84E48CFD1D33A2CB00A4D89B /* WCNavigationController.m in Sources */,
 				84163CFE1D2BF876003BA2A6 /* MJRefreshBackGifFooter.m in Sources */,
+				84A7026C1D3BC509007897DB /* WCPopUpEmotionView.m in Sources */,
 				84163D091D2BF876003BA2A6 /* MKAnnotationView+WebCache.m in Sources */,
 				84163CF81D2BF876003BA2A6 /* MJRefreshComponent.m in Sources */,
 				843C2CED1D336A39009EFA3C /* WCContactDetailController.m in Sources */,

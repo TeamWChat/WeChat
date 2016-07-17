@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+@class WCEmotion;
 
 @interface WCEmotionView : UIView
+
+@property (nonatomic, strong) NSArray<WCEmotion *> *emotions;
 
 @end

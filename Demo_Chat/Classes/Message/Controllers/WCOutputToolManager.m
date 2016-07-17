@@ -9,9 +9,10 @@
 #import "WCOutputToolManager.h"
 #import "WCEmotionView.h"
 #import "WCTypeSelectView.h"
+#import "WCEmotion.h"
 
 static const CGFloat kInputViewHeight       = 49.f;
-static const CGFloat kEmotionViewHeight     = 300.f;
+static const CGFloat kEmotionViewHeight     = 270.f;
 static const CGFloat kTypeSelectViewHeight  = kEmotionViewHeight;
 
 #define kDefaultTopConstraint (kScreenHeight-kInputViewHeight)
@@ -41,6 +42,7 @@ static const CGFloat kTypeSelectViewHeight  = kEmotionViewHeight;
 - (WCEmotionView *)emotionView {
     if (!_emotionView) {
         WCEmotionView *emotionView = [[WCEmotionView alloc] init];
+        emotionView.emotions = [WCEmotion emojis];
         [self.view addSubview:emotionView];
         _emotionView = emotionView;
     }
@@ -77,7 +79,7 @@ static const CGFloat kTypeSelectViewHeight  = kEmotionViewHeight;
     self = [super init];
     if (self) {
         _superViewController = viewController;
-        [self.view layoutIfNeeded];
+        [self.view setNeedsLayout];
     }
     return self;
 }
