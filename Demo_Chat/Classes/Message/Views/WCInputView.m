@@ -54,10 +54,21 @@ NSString *const kWCInputViewMessageKey                  = @"kWCInputViewMessageK
     self.talkButton = talkButton;
     talkButton.hidden = YES;
     
-    UIPanGestureRecognizer *panGesture = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(selectorToTalkButtonPanGesture:)];
-    [talkButton addGestureRecognizer:panGesture];
-    
-    [talkButton addTarget:self action:@selector(respondsToTalkButtonTouchDown:) forControlEvents:UIControlEventTouchDown];
+    [talkButton addTarget:self
+                   action:@selector(respondsToTalkButtonTouchDown:)
+         forControlEvents:UIControlEventTouchDown];
+    [talkButton addTarget:self
+                   action:@selector(respondsToTalkButtonEnter:)
+         forControlEvents:UIControlEventTouchDragEnter];
+    [talkButton addTarget:self
+                   action:@selector(respondsToTalkButtonExit:)
+         forControlEvents:UIControlEventTouchDragExit];
+    [talkButton addTarget:self
+                   action:@selector(respondsToTalkButtonTouchUpInside:)
+         forControlEvents:UIControlEventTouchUpInside];
+    [talkButton addTarget:self
+                   action:@selector(respondsToTalkButtonTouchUpOutside:)
+         forControlEvents:UIControlEventTouchUpOutside];
     
     UIView *textField = self.textField;
     [talkButton autoPinEdge:ALEdgeTop toEdge:ALEdgeTop ofView:textField withOffset:0];
@@ -137,32 +148,26 @@ NSString *const kWCInputViewMessageKey                  = @"kWCInputViewMessageK
     self.emotionButton.selected = NO;
 }
 
-#pragma mark - Selector
-
-- (void)selectorToTalkButtonPanGesture:(UIPanGestureRecognizer *)sender {
-    CGPoint touchPoint = [sender locationInView:sender.view];
-    BOOL inView = CGRectContainsPoint(sender.view.frame, touchPoint);
-    
-    if (sender.state != UIGestureRecognizerStateEnded) {
-        if (inView) {
-            [[NSNotificationCenter defaultCenter] postNotificationName:kWCInputViewDidStartTalkNotification object:nil];
-        } else {
-            [[NSNotificationCenter defaultCenter] postNotificationName:kWCInputViewDidPauseTalkNotification object:nil];
-        }
-    } else {
-        if (inView) {
-            [[NSNotificationCenter defaultCenter] postNotificationName:kWCInputViewDidFinishTalkNotification object:nil];
-        } else {
-            [[NSNotificationCenter defaultCenter] postNotificationName:kWCInputViewDidCancelTalkNotification object:nil];
-        }
-    }
-}
-
-- (void)selectorToTalkButtonTapGesture:(UITapGestureRecognizer *)sender {
-    }
+#pragma mark - TalkButton Selector
 
 - (void)respondsToTalkButtonTouchDown:(UIButton *)sender {
     [[NSNotificationCenter defaultCenter] postNotificationName:kWCInputViewDidStartTalkNotification object:nil];
+}
+
+- (void)respondsToTalkButtonEnter:(UIButton *)sender {
+    [[NSNotificationCenter defaultCenter] postNotificationName:kWCInputViewDidStartTalkNotification object:nil];
+}
+
+- (void)respondsToTalkButtonExit:(UIButton *)sender {
+    [[NSNotificationCenter defaultCenter] postNotificationName:kWCInputViewDidPauseTalkNotification object:nil];
+}
+
+- (void)respondsToTalkButtonTouchUpInside:(UIButton *)sender {
+    [[NSNotificationCenter defaultCenter] postNotificationName:kWCInputViewDidFinishTalkNotification object:nil];
+}
+
+- (void)respondsToTalkButtonTouchUpOutside:(UIButton *)sender {
+    [[NSNotificationCenter defaultCenter] postNotificationName:kWCInputViewDidCancelTalkNotification object:nil];
 }
 
 #pragma mark - Public Method
