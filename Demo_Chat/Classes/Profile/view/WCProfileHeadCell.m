@@ -7,6 +7,7 @@
 //
 
 #import "WCProfileHeadCell.h"
+#import "WCProfilePersonInfo.h"
 
 #define avator @"http://ww3.sinaimg.cn/large/610dc034gw1f5pu0w0r56j20m80rsjuy.jpg"
 
@@ -14,12 +15,13 @@
 
 -(void)layoutSubviews
 {
+    WCProfilePersonInfo *model = [WCProfilePersonInfo shareInstance];
     [super layoutSubviews];
     self.avatarImageView.layer.cornerRadius = 5.f;
     self.avatarImageView.clipsToBounds = YES;
     [self.avatarImageView sd_setImageWithURL:[NSURL URLWithString:avator]];
-    self.userNameLabel.text = @"zuosdaf";
-    self.accountLabel.text = @"15234562";
+    self.userNameLabel.text = model.userName;
+    self.accountLabel.text = model.userId;
 }
 
 +(instancetype)weHeadCellWithTabelView:(UITableView *)tableView

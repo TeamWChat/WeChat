@@ -24,6 +24,9 @@
     self.navigationBar.tintColor = [UIColor whiteColor];
 }
 
+
+
+
 - (UIStatusBarStyle)preferredStatusBarStyle {
     return UIStatusBarStyleLightContent;
 }

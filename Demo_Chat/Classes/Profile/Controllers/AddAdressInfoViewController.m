@@ -17,11 +17,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"返回" style:UIBarButtonItemStyleDone target:self action:@selector(clickBackItem)];
+
+}
+
+-(void)clickBackItem
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -46,6 +48,7 @@
     
     BaseTableViewCell *cell = [[BaseTableViewCell alloc] initWithAccess:UITableViewCellStyleDefault reuseIdentifier:nil isAccess:UITableViewCellAccessoryNone];
     cell.textLabel.text = @"fadsg";
+    [cell contentLabelAddConstraint:@"zheshineirongdfgdfgsdhfdfhrtdfhfghgfjfgdjjgf" fontSize:20 MaxWidth:(WIDTH - cell.textLabel.frame.size.width) MaxHeight:20];
     return cell;
 }
 

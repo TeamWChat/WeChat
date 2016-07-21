@@ -85,6 +85,11 @@
 		C24B3EEE1D38CE3A009F991D /* AdressViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C24B3EED1D38CE3A009F991D /* AdressViewController.m */; };
 		C24B3EF11D38E1B0009F991D /* WCProfileAdressInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C24B3EF01D38E1B0009F991D /* WCProfileAdressInfoModel.m */; };
 		C24B3EF41D38E6B4009F991D /* AddAdressInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C24B3EF31D38E6B4009F991D /* AddAdressInfoViewController.m */; };
+		C2508F161D3F288100B0B061 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2508F151D3F288000B0B061 /* Accelerate.framework */; };
+		C2508F201D3F603800B0B061 /* UIImage+ImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = C2508F1F1D3F603800B0B061 /* UIImage+ImageEffects.m */; };
+		C2508F241D40B73000B0B061 /* InfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C2508F221D40B73000B0B061 /* InfoCell.m */; };
+		C2508F251D40B73000B0B061 /* InfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2508F231D40B73000B0B061 /* InfoCell.xib */; };
+		C28A13611D3CAF0000FA1420 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C28A13601D3CAF0000FA1420 /* SearchViewController.m */; };
 		C28B66F51D348876001C9A22 /* libHyphenateFullSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C28B66F41D348876001C9A22 /* libHyphenateFullSDK.a */; };
 		C28B67151D34E3F3001C9A22 /* WCProfileWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C28B67141D34E3F3001C9A22 /* WCProfileWebViewController.m */; };
 		C28B671E1D35D9B0001C9A22 /* WCProfileMineInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C28B671D1D35D9B0001C9A22 /* WCProfileMineInfoViewController.m */; };
@@ -316,6 +321,14 @@
 		C24B3EF01D38E1B0009F991D /* WCProfileAdressInfoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCProfileAdressInfoModel.m; sourceTree = "<group>"; };
 		C24B3EF21D38E6B4009F991D /* AddAdressInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddAdressInfoViewController.h; sourceTree = "<group>"; };
 		C24B3EF31D38E6B4009F991D /* AddAdressInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddAdressInfoViewController.m; sourceTree = "<group>"; };
+		C2508F151D3F288000B0B061 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		C2508F1E1D3F603800B0B061 /* UIImage+ImageEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImage+ImageEffects.h"; path = "Demo_Chat/Classes/UIImage+ImageEffects.h"; sourceTree = SOURCE_ROOT; };
+		C2508F1F1D3F603800B0B061 /* UIImage+ImageEffects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+ImageEffects.m"; path = "Demo_Chat/Classes/UIImage+ImageEffects.m"; sourceTree = SOURCE_ROOT; };
+		C2508F211D40B73000B0B061 /* InfoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfoCell.h; sourceTree = "<group>"; };
+		C2508F221D40B73000B0B061 /* InfoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfoCell.m; sourceTree = "<group>"; };
+		C2508F231D40B73000B0B061 /* InfoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InfoCell.xib; sourceTree = "<group>"; };
+		C28A135F1D3CAEFF00FA1420 /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
+		C28A13601D3CAF0000FA1420 /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
 		C28B66F41D348876001C9A22 /* libHyphenateFullSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libHyphenateFullSDK.a; sourceTree = "<group>"; };
 		C28B67131D34E3F3001C9A22 /* WCProfileWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WCProfileWebViewController.h; path = Controllers/WCProfileWebViewController.h; sourceTree = "<group>"; };
 		C28B67141D34E3F3001C9A22 /* WCProfileWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WCProfileWebViewController.m; path = Controllers/WCProfileWebViewController.m; sourceTree = "<group>"; };
@@ -373,6 +386,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C2508F161D3F288100B0B061 /* Accelerate.framework in Frameworks */,
 				C28B67551D36394B001C9A22 /* libsqlite3.0.tbd in Frameworks */,
 				84163CF11D2BF876003BA2A6 /* libcrypto.a in Frameworks */,
 				84163CF21D2BF876003BA2A6 /* libcurl.a in Frameworks */,
@@ -402,6 +416,7 @@
 		84163C061D2BF84B003BA2A6 = {
 			isa = PBXGroup;
 			children = (
+				C2508F151D3F288000B0B061 /* Accelerate.framework */,
 				84163C111D2BF84B003BA2A6 /* Demo_Chat */,
 				84163C2B1D2BF84B003BA2A6 /* Demo_ChatTests */,
 				84163C361D2BF84B003BA2A6 /* Demo_ChatUITests */,
@@ -487,6 +502,8 @@
 				843C2CEC1D336A39009EFA3C /* WCContactDetailController.m */,
 				843C2CEE1D336A4E009EFA3C /* WCContactTableController.h */,
 				843C2CEF1D336A4E009EFA3C /* WCContactTableController.m */,
+				C28A135F1D3CAEFF00FA1420 /* SearchViewController.h */,
+				C28A13601D3CAF0000FA1420 /* SearchViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -799,6 +816,8 @@
 		84163CDE1D2BF876003BA2A6 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				C2508F1E1D3F603800B0B061 /* UIImage+ImageEffects.h */,
+				C2508F1F1D3F603800B0B061 /* UIImage+ImageEffects.m */,
 				C28B674B1D361281001C9A22 /* CommonUtils.h */,
 				C28B674C1D361281001C9A22 /* CommonUtils.m */,
 				C28B67681D3728C0001C9A22 /* FMDBManager.h */,
@@ -913,6 +932,9 @@
 				C24B3EDC1D3874A4009F991D /* WCProfileHeadCell.xib */,
 				C24B3EDD1D3874A4009F991D /* WCProfileWebView.h */,
 				C24B3EDE1D3874A4009F991D /* WCProfileWebView.m */,
+				C2508F211D40B73000B0B061 /* InfoCell.h */,
+				C2508F221D40B73000B0B061 /* InfoCell.m */,
+				C2508F231D40B73000B0B061 /* InfoCell.xib */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -1045,7 +1067,6 @@
 				TargetAttributes = {
 					84163C0E1D2BF84B003BA2A6 = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = 647WB9JJ66;
 					};
 					84163C271D2BF84B003BA2A6 = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -1092,6 +1113,7 @@
 				84163D041D2BF876003BA2A6 /* MJRefresh.bundle in Resources */,
 				84E48CFF1D33CDA600A4D89B /* Assets.xcassets in Resources */,
 				84163D191D2BF876003BA2A6 /* Message.storyboard in Resources */,
+				C2508F251D40B73000B0B061 /* InfoCell.xib in Resources */,
 				84E48D091D33D72400A4D89B /* WCInputView.xib in Resources */,
 				84163D1A1D2BF876003BA2A6 /* Profile.storyboard in Resources */,
 			);
@@ -1132,6 +1154,7 @@
 				C28B674D1D361281001C9A22 /* CommonUtils.m in Sources */,
 				C28B67721D378187001C9A22 /* WeChatAlert.m in Sources */,
 				C24B3EE41D3874A4009F991D /* WCProfileWebView.m in Sources */,
+				C2508F201D3F603800B0B061 /* UIImage+ImageEffects.m in Sources */,
 				84163C141D2BF84B003BA2A6 /* main.m in Sources */,
 				84163D0C1D2BF876003BA2A6 /* SDWebImageCompat.m in Sources */,
 				84163CFF1D2BF876003BA2A6 /* MJRefreshBackNormalFooter.m in Sources */,
@@ -1152,6 +1175,8 @@
 				84163D021D2BF876003BA2A6 /* MJRefreshNormalHeader.m in Sources */,
 				84163CFC1D2BF876003BA2A6 /* MJRefreshAutoNormalFooter.m in Sources */,
 				C24B3EF41D38E6B4009F991D /* AddAdressInfoViewController.m in Sources */,
+				C2508F241D40B73000B0B061 /* InfoCell.m in Sources */,
+				C28A13611D3CAF0000FA1420 /* SearchViewController.m in Sources */,
 				C28B67151D34E3F3001C9A22 /* WCProfileWebViewController.m in Sources */,
 				84163CF71D2BF876003BA2A6 /* MJRefreshBackFooter.m in Sources */,
 				84163D0D1D2BF876003BA2A6 /* SDWebImageDecoder.m in Sources */,
@@ -1337,6 +1362,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PREFIX_HEADER = "$(SRCROOT)/Demo_Chat/PrefixHeader.pch";
 				INFOPLIST_FILE = Demo_Chat/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1357,6 +1383,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PREFIX_HEADER = "$(SRCROOT)/Demo_Chat/PrefixHeader.pch";
 				INFOPLIST_FILE = Demo_Chat/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",

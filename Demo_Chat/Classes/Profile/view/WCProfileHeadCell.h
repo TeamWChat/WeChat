@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface WCProfileHeadCell : BaseTableViewCell
+@interface WCProfileHeadCell : UITableViewCell
 @property (weak, nonatomic) IBOutlet UIImageView *avatarImageView;
 @property (weak, nonatomic) IBOutlet UILabel *userNameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *accountLabel;

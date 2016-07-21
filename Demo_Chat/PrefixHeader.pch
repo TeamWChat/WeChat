@@ -19,11 +19,13 @@
 #import "FMDatabase.h"
 #import "UIView+AutoLayout.h"
 #import "WCNavigationController.h"
-#import <objc/objc-runtime.h>
+
 
 #define WIDTH [UIScreen mainScreen].bounds.size.width
 #define HEIGHT [UIScreen mainScreen].bounds.size.height
 #define kScreenWidth [UIScreen mainScreen].bounds.size.width
 #define kScreenHeight [UIScreen mainScreen].bounds.size.height
+
+#define GreenColorForWeixin [UIColor colorWithRed:41/255.0f green:187/255.0 blue:0 alpha:1]
 
 #endif /* PrefixHeader_pch */

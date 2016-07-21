@@ -12,6 +12,7 @@
 #import "AvatarSetViewController.h"
 #import "NameChangeViewController.h"
 #import "AdressViewController.h"
+#import "InfoCell.h"
 
 
 @interface WCProfileMineInfoViewController ()
@@ -23,7 +24,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
   
- 
 }
 
 #define UserAvatar @"头像"
@@ -68,16 +68,15 @@
 }
 
 //头像地址
-#define AVATOR @"http://ww4.sinaimg.cn/large/610dc034jw1f5md1e68p9j20fk0ncgo0.jpg"
+#define AVATOR @"http://ww3.sinaimg.cn/large/610dc034gw1f5pu0w0r56j20m80rsjuy.jpg"
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     NSArray *sectionArray = self.profileArray[indexPath.section];
     WCProfilePersonInfo *model = [WCProfilePersonInfo shareInstance];
 
     
-    
-    BaseTableViewCell *cell = [BaseTableViewCell baseCellWithTableView:tableView];
-    cell.textLabel.text = sectionArray[indexPath.row];
+    InfoCell *cell = [InfoCell infoCellWithTabelView:tableView];
+    cell.titals = sectionArray[indexPath.row];
     if (indexPath.section == 0 && indexPath.row == 0) {
         [cell rightImageViewAddConstraint:AVATOR];
         return cell;
@@ -85,36 +84,36 @@
     else
     {
         NSString *text = @"";
-        if ([cell.textLabel.text isEqualToString:UserName]) {
+        NSString *leftStr = cell.leftLabel.text;
+        if ([leftStr isEqualToString:UserName]) {
             
             text = model.userName;
         }
-        else if([cell.textLabel.text isEqualToString:UserId])
+        else if([leftStr isEqualToString:UserId])
         {
             text = model.userId;
         }
-        else if ([cell.textLabel.text isEqualToString:UserCode])
+        else if ([leftStr isEqualToString:UserCode])
         {
             text = @"";
         }
-        else if ([cell.textLabel.text isEqualToString:UserAdress])
+        else if ([leftStr isEqualToString:UserAdress])
         {
             text = model.adress;
         }
-        else if ([cell.textLabel.text isEqualToString:UserSex])
+        else if ([leftStr isEqualToString:UserSex])
         {
             text = model.sex;
         }
-        else if ([cell.textLabel.text isEqualToString:UserLocation])
+        else if ([leftStr isEqualToString:UserLocation])
         {
             text = model.location;
         }
-        else if ([cell.textLabel.text isEqualToString:UserWantSay])
+        else if ([leftStr isEqualToString:UserWantSay])
         {
             text = model.whatHeWhatToSay;
         }
-        [cell contentLabelAddConstraint:text fontSize:16 width:270 height:CGFLOAT_MAX];
-        
+        cell.rightLabel.text = text;
         return cell;
     }
     return nil;

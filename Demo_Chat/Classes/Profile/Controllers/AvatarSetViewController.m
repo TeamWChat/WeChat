@@ -17,7 +17,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor blackColor];
-    [CommonUtils navRightBarButtonItemWithView:[UIImage imageNamed:@"更多信息"] text:nil font:0 viewWith:25 viewHeight:20 target:self action:@selector(clickRightItem)];
+    self.navigationItem.rightBarButtonItem = [CommonUtils navBarButtonItemWithView:[UIImage imageNamed:@"更多信息"] text:nil font:0 viewWith:25 viewHeight:20 target:self action:@selector(clickRightItem)];
 
     [self displayAvatar];
 }

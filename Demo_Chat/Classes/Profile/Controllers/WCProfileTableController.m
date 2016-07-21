@@ -21,7 +21,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-
 }
 
 -(NSArray *)cas
@@ -67,7 +66,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     if (indexPath.section == 0) {
-        WCProfileHeadCell *cell = [WCProfileHeadCell  weHeadCellWithTabelView:tableView];
+        WCProfileHeadCell *cell = [WCProfileHeadCell weHeadCellWithTabelView:tableView];
         return cell;
     }
     else
@@ -132,16 +131,11 @@
     self.hidesBottomBarWhenPushed=NO;
 }
 
--(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
+
+
+-(void)viewWillAppear:(BOOL)animated
 {
-    return 20;
+    [super viewWillAppear:animated];
+    [self.tableView deselectRowAtIndexPath:[self.tableView indexPathForSelectedRow] animated:YES];
 }
-
-//不知明原因点两下cell才能跳转,先如此写,待有缘人改过
--(void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    [self tableView:tableView didSelectRowAtIndexPath:indexPath];
-}
-
-
 @end

@@ -16,26 +16,25 @@
   return  [str boundingRectWithSize:CGSizeMake(width, height) options:NSStringDrawingUsesFontLeading|NSStringDrawingTruncatesLastVisibleLine|NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:font]} context:nil].size;
     
 }
-//根据不同的需求创建rightitem
+//根据不同的需求创建item
 //系统item
-+(void)navRightBarButtonItemWithimage:(UIImage *)image target:(UIViewController *)target action:(SEL)action
++(UIBarButtonItem *)navBarButtonItemWithimage:(UIImage *)image target:(UIViewController *)target action:(SEL)action
 {
     UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithImage:[image imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] style:UIBarButtonItemStyleDone target:target action:action];
-    target.navigationItem.rightBarButtonItem = item;
+    return item;
 }
 
 //自定义item
-+(void)navRightBarButtonItemWithView:(UIImage *)image text:(NSString *)text font:(CGFloat)font viewWith:(CGFloat)with viewHeight:(CGFloat)height target:(UIViewController *)target action:(SEL)action
++(UIBarButtonItem *)navBarButtonItemWithView:(UIImage *)image text:(NSString *)text font:(CGFloat)font viewWith:(CGFloat)with viewHeight:(CGFloat)height target:(UIViewController *)target action:(SEL)action
 {
     UIButton *imageBtn = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, with, height)];
     [imageBtn setBackgroundImage:image forState:UIControlStateNormal];
     [imageBtn addTarget:target action:action forControlEvents:UIControlEventTouchUpInside];
     [imageBtn setTitle:text forState:UIControlStateNormal];
     imageBtn.titleLabel.font = [UIFont systemFontOfSize:font];
-//    imageBtn.backgroundColor = [UIColor whiteColor];
     UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithCustomView:imageBtn];
 
-    target.navigationItem.rightBarButtonItem = item;
+    return item;
 }
 
 

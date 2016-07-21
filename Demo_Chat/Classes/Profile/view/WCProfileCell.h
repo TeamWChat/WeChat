@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface WCProfileCell : BaseTableViewCell
+@interface WCProfileCell : UITableViewCell
 @property (weak, nonatomic) IBOutlet UIImageView *iconImageView;
 @property (weak, nonatomic) IBOutlet UILabel *whatLabel;
 
