@@ -240,9 +240,15 @@ static const CGFloat kTypeSelectViewHeight  = kEmotionViewHeight;
 #pragma mark - Private Method
 
 - (void)animtedLayoutIfNeeded {
+    CGFloat animatedDuration = 0.25f;
+    if ([self.delegate respondsToSelector:@selector(toolManager:willChangeFrameWithValue:duration:)]) {
+        CGFloat topChangedValue = kDefaultTopConstraint - self.topConstraint.constant;
+        [self.delegate toolManager:self willChangeFrameWithValue:topChangedValue duration:animatedDuration];
+    }
+    
     _canPopDown = NO;
-    [UIView animateWithDuration:0.25f animations:^{
-        [self.view layoutIfNeeded];
+    [UIView animateWithDuration:animatedDuration animations:^{
+        [self.view setNeedsLayout];
     } completion:^(BOOL finished) {
         _canPopDown = YES;
     }];

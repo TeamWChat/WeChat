@@ -8,8 +8,17 @@
 
 #import <UIKit/UIKit.h>
 #import "WCInputView.h"
+@class WCOutputToolManager;
+
+@protocol WCOutputToolManagerDelegate <NSObject>
+
+- (void)toolManager:(WCOutputToolManager *)toolManager willChangeFrameWithValue:(CGFloat)value duration:(CGFloat)duration;
+
+@end
 
 @interface WCOutputToolManager : UIViewController
+
+@property (nonatomic, weak) id<WCOutputToolManagerDelegate> delegate;
 
 + (instancetype)showInSupperController:(UIViewController *)superViewController;
 
