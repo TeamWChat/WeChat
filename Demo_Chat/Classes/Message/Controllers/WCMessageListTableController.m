@@ -33,10 +33,12 @@ static NSString *const kWCChatRoomsCellIdentifier = @"kWCChatRoomsCellIdentifier
     [super viewDidLoad];
     
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:kWCChatRoomsCellIdentifier];
+    
+    [self loadData];
 }
 
 - (void)loadData {
-    
+
 }
 
 #pragma mark - Table view data source

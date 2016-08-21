@@ -18,17 +18,26 @@
     
     NSArray *allKeysNoSort = emojiAliases.allKeys;
     NSSortDescriptor *descriptor = [NSSortDescriptor sortDescriptorWithKey:nil ascending:YES];
-    
     NSArray *allKeys = [allKeysNoSort sortedArrayUsingDescriptors:@[descriptor]];
-    
     NSMutableArray *emojis = [NSMutableArray array];
-    for (NSString *code in allKeys) {
+    for (NSString *emoji in allKeys) {
         WCEmotion *emotion = [[WCEmotion alloc] init];
-        emotion.code = code;
+        emotion.emoji = emoji;
         [emojis addObject:emotion];
     }
     
     return emojis;
 }
+
+- (BOOL)isEmoji {
+    return (self.emoji != nil);
+}
+
++ (NSArray *)emotions {
+    NSString *emotionFilePath = [[NSBundle mainBundle] pathForResource:@"emotion" ofType:@"plist"];
+    NSMutableArray *emotions = [WCEmotion mj_objectArrayWithFile:emotionFilePath];
+    return emotions;
+}
+
 
 @end

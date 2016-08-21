@@ -38,10 +38,4 @@
 
 @end
 
-UIKIT_EXTERN NSString *const kWCInputViewDidSendMessageNotification;
-UIKIT_EXTERN NSString *const kWCInputViewMessageKey;
 
-UIKIT_EXTERN NSString *const kWCInputViewDidStartTalkNotification;
-UIKIT_EXTERN NSString *const kWCInputViewDidPauseTalkNotification;
-UIKIT_EXTERN NSString *const kWCInputViewDidFinishTalkNotification;
-UIKIT_EXTERN NSString *const kWCInputViewDidCancelTalkNotification;

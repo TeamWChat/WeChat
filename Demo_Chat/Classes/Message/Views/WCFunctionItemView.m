@@ -1,14 +1,14 @@
 //
-//  WCTypeSelectView.m
+//  WCFunctionItemView.m
 //  Demo_Chat
 //
-//  Created by admin on 16/7/16.
+//  Created by admin on 16/8/21.
 //  Copyright © 2016年 admin. All rights reserved.
 //
 
-#import "WCTypeSelectView.h"
+#import "WCFunctionItemView.h"
 
-@implementation WCTypeSelectView
+@implementation WCFunctionItemView
 
 /*
 // Only override drawRect: if you perform custom drawing.

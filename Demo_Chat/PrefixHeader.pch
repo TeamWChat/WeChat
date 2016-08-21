@@ -13,6 +13,7 @@
 #define kScreenHeight [UIScreen mainScreen].bounds.size.height
 
 #import "UIView+AutoLayout.h"
-
+#import "MJExtension.h"
+#import "WCConst.h"
 
 #endif /* PrefixHeader_pch */

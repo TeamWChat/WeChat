@@ -7,9 +7,10 @@
 //
 
 #import "WCOutputToolManager.h"
-#import "WCEmotionView.h"
-#import "WCTypeSelectView.h"
+#import "WCEmotionContainView.h"
 #import "WCEmotion.h"
+#import "WCFunctionItemView.h"
+#import "WCEmotionBag.h"
 
 static const CGFloat kInputViewHeight       = 49.f;
 static const CGFloat kEmotionViewHeight     = 270.f;
@@ -20,9 +21,9 @@ static const CGFloat kTypeSelectViewHeight  = kEmotionViewHeight;
 @interface WCOutputToolManager ()<WCInputViewDelegate>
 
 @property (nonatomic, weak) UIViewController        *superViewController;
-@property (nonatomic, weak) WCInputView             *inputView;
-@property (nonatomic, weak) WCEmotionView           *emotionView;
-@property (nonatomic, weak) WCTypeSelectView        *typeSelectView;
+@property (nonatomic, weak) WCInputView             *inputView;//输入框视图
+@property (nonatomic, weak) WCEmotionContainView    *emotionContainView;//表情视图
+@property (nonatomic, weak) WCFunctionItemView      *functionItemView;//功能视图
 
 /**当动画结束后才可以popDown*/
 @property (nonatomic, assign) BOOL                  canPopDown;
@@ -31,7 +32,7 @@ static const CGFloat kTypeSelectViewHeight  = kEmotionViewHeight;
 /**emotionView 与 inputView的top约束*/
 @property (nonatomic, strong) NSLayoutConstraint    *emotionTopConstraint;
 /**typeSelectView 与 inputView的top约束*/
-@property (nonatomic, strong) NSLayoutConstraint    *typeSelectTopConstraint;
+@property (nonatomic, strong) NSLayoutConstraint    *functionItemTopConstraint;
 
 @end
 
@@ -39,14 +40,13 @@ static const CGFloat kTypeSelectViewHeight  = kEmotionViewHeight;
 
 #pragma mark - Lazy Load
 
-- (WCEmotionView *)emotionView {
-    if (!_emotionView) {
-        WCEmotionView *emotionView = [[WCEmotionView alloc] init];
-        emotionView.emotions = [WCEmotion emojis];
-        [self.view addSubview:emotionView];
-        _emotionView = emotionView;
+- (WCEmotionContainView *)emotionContainView {
+    if (!_emotionContainView) {
+        WCEmotionContainView *emotionContainView = [[WCEmotionContainView alloc] init];
+        [self.view addSubview:emotionContainView];
+        _emotionContainView = emotionContainView;
     }
-    return _emotionView;
+    return _emotionContainView;
 }
 
 - (WCInputView *)inputView {
@@ -59,13 +59,13 @@ static const CGFloat kTypeSelectViewHeight  = kEmotionViewHeight;
     return _inputView;
 }
 
-- (WCTypeSelectView *)typeSelectView {
-    if (!_typeSelectView) {
-        WCTypeSelectView *typeSelectView = [[WCTypeSelectView alloc] init];
-        [self.view addSubview:typeSelectView];
-        _typeSelectView = typeSelectView;
+- (WCFunctionItemView *)functionItemView {
+    if (!_functionItemView) {
+        WCFunctionItemView *functionItemView = [[WCFunctionItemView alloc] init];
+        [self.view addSubview:functionItemView];
+        _functionItemView = functionItemView;
     }
-    return _typeSelectView;
+    return _functionItemView;
 }
 
 #pragma mark - Initialization
@@ -139,6 +139,9 @@ static const CGFloat kTypeSelectViewHeight  = kEmotionViewHeight;
     
     [self bindingParentViewController];
     [self setupConstraint];
+    
+    [self.emotionContainView addEmotionBag:[[WCEmotionBag alloc] initWithTitle:@"默认表情" emotions:[WCEmotion emotions]]];
+    [self.emotionContainView addEmotionBag:[[WCEmotionBag alloc] initWithTitle:@"Emoji表情" emotions:[WCEmotion emojis]]];
 }
 
 - (void)bindingParentViewController {
@@ -147,7 +150,6 @@ static const CGFloat kTypeSelectViewHeight  = kEmotionViewHeight;
 }
 
 - (void)setupConstraint {
-    
     //设置输入框约束
     [self.inputView autoPinEdgeToSuperviewEdge:ALEdgeTop withInset:0];
     [self.inputView autoPinEdgeToSuperviewEdge:ALEdgeLeft withInset:0];
@@ -160,17 +162,18 @@ static const CGFloat kTypeSelectViewHeight  = kEmotionViewHeight;
     self.topConstraint = [self.view autoPinEdgeToSuperviewEdge:ALEdgeTop withInset:kDefaultTopConstraint];
     [self.view autoSetDimension:ALDimensionHeight toSize:kScreenHeight];
     
-    [self.emotionView autoPinEdgeToSuperviewEdge:ALEdgeLeft withInset:0];
-    [self.emotionView autoPinEdgeToSuperviewEdge:ALEdgeRight withInset:0];
-    [self.emotionView autoSetDimension:ALDimensionHeight toSize:kEmotionViewHeight];
-    self.emotionTopConstraint = [self.emotionView autoPinEdge:ALEdgeTop toEdge:ALEdgeBottom ofView:self.inputView withOffset:0];
-    self.emotionView.backgroundColor = [UIColor blueColor];
+    [self.emotionContainView autoPinEdgeToSuperviewEdge:ALEdgeLeft withInset:0];
+    [self.emotionContainView autoPinEdgeToSuperviewEdge:ALEdgeRight withInset:0];
+    [self.emotionContainView autoSetDimension:ALDimensionHeight toSize:kEmotionViewHeight];
+    self.emotionTopConstraint = [self.emotionContainView autoPinEdge:ALEdgeTop toEdge:ALEdgeBottom ofView:self.inputView withOffset:0];
     
-    [self.typeSelectView autoPinEdgeToSuperviewEdge:ALEdgeLeft withInset:0];
-    [self.typeSelectView autoPinEdgeToSuperviewEdge:ALEdgeRight withInset:0];
-    [self.typeSelectView autoSetDimension:ALDimensionHeight toSize:kEmotionViewHeight];
-    self.typeSelectTopConstraint = [self.typeSelectView autoPinEdge:ALEdgeTop toEdge:ALEdgeBottom ofView:self.inputView withOffset:0];
-    self.typeSelectView.backgroundColor = [UIColor orangeColor];
+    [self.functionItemView autoPinEdgeToSuperviewEdge:ALEdgeLeft withInset:0];
+    [self.functionItemView autoPinEdgeToSuperviewEdge:ALEdgeRight withInset:0];
+    [self.functionItemView autoSetDimension:ALDimensionHeight toSize:kEmotionViewHeight];
+    self.functionItemTopConstraint = [self.functionItemView autoPinEdge:ALEdgeTop toEdge:ALEdgeBottom ofView:self.inputView withOffset:0];
+    self.functionItemView.backgroundColor = [UIColor orangeColor];
+    
+    [self.view setNeedsLayout];
 }
 
 #pragma mark - UIKeyboardNotification Selector
@@ -180,7 +183,7 @@ static const CGFloat kTypeSelectViewHeight  = kEmotionViewHeight;
     CGFloat keyboardHeight = CGRectGetHeight(keyboardEndFrame);
     self.topConstraint.constant = kDefaultTopConstraint - keyboardHeight;
     self.emotionTopConstraint.constant = keyboardHeight;
-    self.typeSelectTopConstraint.constant = keyboardHeight;
+    self.functionItemTopConstraint.constant = keyboardHeight;
     [self animtedLayoutIfNeeded];
 }
 
@@ -214,13 +217,13 @@ static const CGFloat kTypeSelectViewHeight  = kEmotionViewHeight;
 - (void)inputView:(WCInputView *)inputView emotionButtonDidTouch:(UIButton *)emotionButton {
     self.topConstraint.constant = kDefaultTopConstraint - kEmotionViewHeight;
     self.emotionTopConstraint.constant = 0;
-    self.typeSelectTopConstraint.constant = kEmotionViewHeight;
+    self.functionItemTopConstraint.constant = kEmotionViewHeight;
     [self animtedLayoutIfNeeded];
 }
 
 - (void)inputView:(WCInputView *)inputView typeSelectButtonDidTouch:(UIButton *)typeSelectButton {
     self.topConstraint.constant = kDefaultTopConstraint - kTypeSelectViewHeight;
-    self.typeSelectTopConstraint.constant = 0;
+    self.functionItemTopConstraint.constant = 0;
     self.emotionTopConstraint.constant = kTypeSelectViewHeight;
     [self animtedLayoutIfNeeded];
 }

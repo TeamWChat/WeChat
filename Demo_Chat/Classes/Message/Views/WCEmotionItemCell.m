@@ -8,8 +8,9 @@
 
 #import "WCEmotionItemCell.h"
 #import "WCEmotion.h"
+#import "NSString+Emojize.h"
 
-#define kRandomColorOffset (arc4random()%255/255.f)
+//#define kRandomColorOffset (arc4random()%255/255.f)
 
 @interface WCEmotionItemCell ()
 
@@ -24,7 +25,7 @@
     self = [super initWithFrame:frame];
     if (self) {
         
-        self.backgroundColor = [UIColor colorWithRed:kRandomColorOffset green:kRandomColorOffset blue:kRandomColorOffset alpha:1];
+//        self.backgroundColor = [UIColor colorWithRed:kRandomColorOffset green:kRandomColorOffset blue:kRandomColorOffset alpha:1];
         
         [self setupEmotionButton];
     }
@@ -35,6 +36,7 @@
     UIButton *emotionButton = [[UIButton alloc] init];
     [self.contentView addSubview:emotionButton];
     self.emotionButton = emotionButton;
+    emotionButton.adjustsImageWhenHighlighted = NO;
     
     //约束
     [emotionButton autoPinEdgesToSuperviewEdgesWithInsets:UIEdgeInsetsZero];
@@ -49,17 +51,36 @@
 - (void)setEmotion:(WCEmotion *)emotion {
     _emotion = emotion;
     
-    [self.emotionButton setTitle:emotion.code forState:UIControlStateNormal];
+    [self.emotionButton setAttributedTitle:nil forState:UIControlStateNormal];
+    [self.emotionButton setTitle:nil forState:UIControlStateNormal];
+    [self.emotionButton setImage:nil forState:UIControlStateNormal];
+    
+    if (emotion) {//表情
+        if (emotion.isEmoji) {
+            [self.emotionButton setTitle:[emotion.emoji emojizedString] forState:UIControlStateNormal];
+        } else {
+            [self.emotionButton setImage:[UIImage imageNamed:emotion.image] forState:UIControlStateNormal];
+        }
+        
+    } else {//删除
+        [self.emotionButton setImage:[UIImage imageNamed:@"DeleteEmoticonBtn"] forState:UIControlStateNormal];
+    }
 }
 
 #pragma mark - action
 
 - (void)respondsToEmotionButtonEnter:(UIButton *)sender {
     //显示popupView
+    if (!self.emotion) {
+        return;
+    }
 }
 
 - (void)respondsToEmotionButtonExit:(UIButton *)sender {
     //移除popupView
+    if (!self.emotion) {
+        return;
+    }
 }
 
 - (void)respondsToEmotionButtonTouchDown:(UIButton *)sender {
@@ -73,7 +94,15 @@
 }
 
 - (void)respondsToEmotionButtonTouchUpInside:(UIButton *)sender {
-    //选择表情
+    //选择表情或删除
+    if (self.emotion) {
+        [[NSNotificationCenter defaultCenter] postNotificationName:kWCEmotionButtonDidTouchUpInsideNotification
+                                                            object:nil
+                                                          userInfo:@{kWCEmotionModelKey:self.emotion}];
+    } else {
+        [[NSNotificationCenter defaultCenter] postNotificationName:kWCEmotionDeleteButtonDidTouchUpInsideNotification
+                                                            object:nil];
+    }
 }
 
 #pragma mark - popupView

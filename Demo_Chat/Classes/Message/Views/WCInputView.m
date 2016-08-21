@@ -8,14 +8,6 @@
 
 #import "WCInputView.h"
 
-NSString *const kWCInputViewDidStartTalkNotification        = @"kWCInputViewDidStartTalkNotification";
-NSString *const kWCInputViewDidCancelTalkNotification       = @"kWCInputViewDidCancelTalkNotification";
-NSString *const kWCInputViewDidPauseTalkNotification        = @"kWCInputViewDidPauseTalkNotification";
-NSString *const kWCInputViewDidFinishTalkNotification       = @"kWCInputViewDidFinishTalkNotification";
-
-NSString *const kWCInputViewDidSendMessageNotification  = @"kWCInputViewDidSendMessageNotification";
-NSString *const kWCInputViewMessageKey                  = @"kWCInputViewMessageKey";
-
 @interface WCInputView () <UITextFieldDelegate>
 
 @property (weak, nonatomic) IBOutlet UIButton   *emotionButton;
